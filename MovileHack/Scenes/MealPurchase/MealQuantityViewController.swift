@@ -44,9 +44,8 @@ class MealQuantityViewController: UIViewController {
     
     // MARK: - Layout
     func populateView(_ meal: Meal) {
-        //Photo
-        if let photoUrl = meal.photoUrl {
-            ImageUtils.downloadImage(urlString: photoUrl) { (image) in
+        if let imageUrl = meal.imageUrl {
+            ImageUtils.downloadImage(urlString: imageUrl) { (image) in
                 if let image = image {
                     self.mealImageView.image = image
                 }

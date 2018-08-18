@@ -12,22 +12,20 @@ class Meal {
     // MARK: - Properties
     let id: String
     let name: String
-    let mealDescription: String?
-    let photoUrl: String?
-    var photo: UIImage?
+    let imageUrl: String?
+    var image: UIImage?
     var products = [Product]()
     
     // MARK: - Initializers
-    init(id: String, name: String, photoUrl: String?) {
+    init(id: String, name: String, imageUrl: String?) {
         self.id = id
         self.name = name
-        self.photoUrl = photoUrl
-        self.photo = nil
-        self.mealDescription = nil
+        self.imageUrl = imageUrl
+        self.image = nil
     }
     
     func getMealImage(completion: @escaping((_ image :UIImage?)->())) {
-        guard let urlString = self.photoUrl, let photoUrl = URL(string: urlString) else {
+        guard let urlString = self.imageUrl, let photoUrl = URL(string: urlString) else {
             completion(nil)
             return
         }
