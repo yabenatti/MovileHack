@@ -10,8 +10,12 @@ import Foundation
 
 enum StoryboardName : String {
     case Payment = "Payment"
+    case ShowProduct = "ShowProduct"
+    case MyMeals = "MyMeals"
 }
 
 enum ViewControllerName {
     static let PaymentViewController = "PaymentViewController"
+    static let ShowProductViewController = "ShowProductViewController"
+    static let MyMealsViewController = "MyMealsViewController"
 }
