@@ -10,8 +10,18 @@ import UIKit
 
 class MyMealsViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet weak var myMealsTableView: UITableView!
-    
+    @IBOutlet weak var myMealsTableView: UITableView! {
+        didSet {
+            self.myMealsTableView.delegate = self
+            self.myMealsTableView.dataSource = self
+            self.myMealsTableView.estimatedRowHeight = 50.0
+            self.myMealsTableView.rowHeight = UITableViewAutomaticDimension
+            
+            self.myMealsTableView.register(MyMealsTableViewCell.self, forCellReuseIdentifier: String(describing: MyMealsTableViewCell.self))
+            self.myMealsTableView.register(UINib(nibName: String(describing: MyMealsTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyMealsTableViewCell.self))
+        }
+    }
+
     // MARK: - Variables
     private var meals = [Meal]() {
         didSet {
@@ -23,6 +33,33 @@ class MyMealsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.meals.append(Meal(id: "123123123", name: "Frango Frito", imageUrl: nil))
+    }
+}
+
+extension MyMealsViewController : UITableViewDelegate {
+    
+}
+
+extension MyMealsViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.meals.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyMealsTableViewCell.self), for: indexPath) as? MyMealsTableViewCell else {
+            return UITableViewCell()
+        }
         
+        cell.setup(meal: self.meals[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let mealQuantityViewController = UIStoryboard(name: .MyMeals).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
+            mealQuantityViewController.meal = self.meals[indexPath.row]
+            self.navigationController?.pushViewController(mealQuantityViewController, animated: true)
+        }
     }
 }

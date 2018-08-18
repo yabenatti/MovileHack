@@ -12,17 +12,15 @@ class Meal {
     // MARK: - Properties
     let id: String
     let name: String
-    let mealDescription: String?
-    let photoUrl: String?
-    var photo: UIImage?
+    let imageUrl: String?
+    var image: UIImage?
     
     // MARK: - Initializers
-    init(id: String, name: String, photoUrl: String?) {
+    init(id: String, name: String, imageUrl: String?) {
         self.id = id
         self.name = name
-        self.photoUrl = photoUrl
-        self.photo = nil
-        self.mealDescription = nil
+        self.imageUrl = imageUrl
+        self.image = nil
     }
     
     // FIXME: Implement Photo download

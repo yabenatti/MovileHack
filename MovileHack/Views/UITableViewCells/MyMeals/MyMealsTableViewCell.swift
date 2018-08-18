@@ -9,10 +9,30 @@
 import UIKit
 
 class MyMealsTableViewCell: UITableViewCell {
-
+    // MARK: - IBOutlets
+    @IBOutlet weak var mealImageView: UIImageView! {
+        didSet {
+            self.mealImageView.contentMode = .scaleAspectFill
+            self.mealImageView.layer.cornerRadius = 10.0
+            self.mealImageView.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var mealNameLabel: UILabel! {
+        didSet {
+            self.mealNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        }
+    }
+    @IBOutlet weak var productsLabel: UILabel! {
+        didSet {
+            self.productsLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        }
+    }
+    
+    // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,4 +41,16 @@ class MyMealsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setup(meal: Meal) {
+        if let mealImage = meal.image {
+            self.mealImageView.image = mealImage
+        } else {
+            self.mealImageView.image = UIImage(named: "meal_default")
+        }
+        
+        self.mealNameLabel.text = meal.name
+        
+        //FIXME: Add correct product names
+        self.productsLabel.text = "Banana, maça"
+    }
 }
