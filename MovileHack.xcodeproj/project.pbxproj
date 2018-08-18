@@ -16,6 +16,26 @@
 		E48BF81821288A8200B6C514 /* MovileHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF81721288A8200B6C514 /* MovileHackTests.swift */; };
 		E48BF83A2128A3FB00B6C514 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8392128A3FB00B6C514 /* StoryboardExtension.swift */; };
 		E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF83C2128A42A00B6C514 /* NavigationConstants.swift */; };
+		E48BF83F2128A5CD00B6C514 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF83E2128A5CD00B6C514 /* PaymentViewController.swift */; };
+		E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF8412128A5E200B6C514 /* Payment.storyboard */; };
+		E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8432128A92400B6C514 /* GraphsViewController.swift */; };
+		E48BF8462128A92C00B6C514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8452128A92C00B6C514 /* LoginViewController.swift */; };
+		E48BF8482128A93600B6C514 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8472128A93600B6C514 /* MarketViewController.swift */; };
+		E48BF84A2128A94300B6C514 /* ShowMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8492128A94300B6C514 /* ShowMealViewController.swift */; };
+		E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF84B2128A94D00B6C514 /* ShowMenuViewController.swift */; };
+		E48BF84E2128A95600B6C514 /* ShowProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF84D2128A95600B6C514 /* ShowProductViewController.swift */; };
+		E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF84F2128A96000B6C514 /* ShowPurveyorViewController.swift */; };
+		E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8512128A97500B6C514 /* ShowRestaurantViewController.swift */; };
+		E48BF8542128A98100B6C514 /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8532128A98100B6C514 /* RegisterMealViewController.swift */; };
+		E48BF8562128A98C00B6C514 /* RegisterMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8552128A98C00B6C514 /* RegisterMenuViewController.swift */; };
+		E48BF8582128A99500B6C514 /* RegisterProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8572128A99500B6C514 /* RegisterProductViewController.swift */; };
+		E48BF85A2128A9A000B6C514 /* RegisterPurveyorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8592128A9A000B6C514 /* RegisterPurveyorViewController.swift */; };
+		E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF85B2128A9A900B6C514 /* RegisterRestaurantViewController.swift */; };
+		E48BF85E2128A9B000B6C514 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF85D2128A9B000B6C514 /* SearchViewController.swift */; };
+		E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF85F2128A9B800B6C514 /* ShoppingCartViewController.swift */; };
+		E48BF8622128A9C200B6C514 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8612128A9C200B6C514 /* Parser.swift */; };
+		E48BF8642128A9C900B6C514 /* Serivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8632128A9C900B6C514 /* Serivce.swift */; };
+		E48BF8662128A9D100B6C514 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8652128A9D100B6C514 /* Model.swift */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +67,26 @@
 		E48BF81921288A8200B6C514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E48BF8392128A3FB00B6C514 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		E48BF83C2128A42A00B6C514 /* NavigationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConstants.swift; sourceTree = "<group>"; };
+		E48BF83E2128A5CD00B6C514 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		E48BF8412128A5E200B6C514 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		E48BF8432128A92400B6C514 /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
+		E48BF8452128A92C00B6C514 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E48BF8472128A93600B6C514 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		E48BF8492128A94300B6C514 /* ShowMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMealViewController.swift; sourceTree = "<group>"; };
+		E48BF84B2128A94D00B6C514 /* ShowMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMenuViewController.swift; sourceTree = "<group>"; };
+		E48BF84D2128A95600B6C514 /* ShowProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProductViewController.swift; sourceTree = "<group>"; };
+		E48BF84F2128A96000B6C514 /* ShowPurveyorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPurveyorViewController.swift; sourceTree = "<group>"; };
+		E48BF8512128A97500B6C514 /* ShowRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRestaurantViewController.swift; sourceTree = "<group>"; };
+		E48BF8532128A98100B6C514 /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
+		E48BF8552128A98C00B6C514 /* RegisterMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMenuViewController.swift; sourceTree = "<group>"; };
+		E48BF8572128A99500B6C514 /* RegisterProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProductViewController.swift; sourceTree = "<group>"; };
+		E48BF8592128A9A000B6C514 /* RegisterPurveyorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPurveyorViewController.swift; sourceTree = "<group>"; };
+		E48BF85B2128A9A900B6C514 /* RegisterRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRestaurantViewController.swift; sourceTree = "<group>"; };
+		E48BF85D2128A9B000B6C514 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E48BF85F2128A9B800B6C514 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		E48BF8612128A9C200B6C514 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		E48BF8632128A9C900B6C514 /* Serivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serivce.swift; sourceTree = "<group>"; };
+		E48BF8652128A9D100B6C514 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +153,7 @@
 		E48BF80121288A8100B6C514 /* MovileHack */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8402128A5D700B6C514 /* Storyboards */,
 				E48BF83B2128A41200B6C514 /* Utils */,
 				E48BF8382128A35D00B6C514 /* Extensions */,
 				E48BF8252128A25F00B6C514 /* Scenes */,
@@ -141,6 +182,7 @@
 		E48BF8222128A1EF00B6C514 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8652128A9D100B6C514 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +190,7 @@
 		E48BF8232128A1F800B6C514 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8632128A9C900B6C514 /* Serivce.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -155,6 +198,7 @@
 		E48BF8242128A1FD00B6C514 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8612128A9C200B6C514 /* Parser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -177,6 +221,7 @@
 		E48BF8262128A26500B6C514 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8452128A92C00B6C514 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -184,6 +229,7 @@
 		E48BF8272128A26900B6C514 /* RegisterRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF85B2128A9A900B6C514 /* RegisterRestaurantViewController.swift */,
 			);
 			path = RegisterRestaurant;
 			sourceTree = "<group>";
@@ -191,6 +237,7 @@
 		E48BF8282128A27600B6C514 /* RegisterPurveyor */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8592128A9A000B6C514 /* RegisterPurveyorViewController.swift */,
 			);
 			path = RegisterPurveyor;
 			sourceTree = "<group>";
@@ -198,6 +245,7 @@
 		E48BF8292128A28600B6C514 /* RegisterMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8552128A98C00B6C514 /* RegisterMenuViewController.swift */,
 			);
 			path = RegisterMenu;
 			sourceTree = "<group>";
@@ -205,6 +253,7 @@
 		E48BF82A2128A29200B6C514 /* RegisterMeal */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8532128A98100B6C514 /* RegisterMealViewController.swift */,
 			);
 			path = RegisterMeal;
 			sourceTree = "<group>";
@@ -212,6 +261,7 @@
 		E48BF82B2128A29A00B6C514 /* RegisterProduct */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8572128A99500B6C514 /* RegisterProductViewController.swift */,
 			);
 			path = RegisterProduct;
 			sourceTree = "<group>";
@@ -243,6 +293,7 @@
 		E48BF82E2128A2C300B6C514 /* ShowRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8512128A97500B6C514 /* ShowRestaurantViewController.swift */,
 			);
 			path = ShowRestaurant;
 			sourceTree = "<group>";
@@ -250,6 +301,7 @@
 		E48BF82F2128A2DD00B6C514 /* ShowPurveyor */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF84F2128A96000B6C514 /* ShowPurveyorViewController.swift */,
 			);
 			path = ShowPurveyor;
 			sourceTree = "<group>";
@@ -257,6 +309,7 @@
 		E48BF8302128A2E500B6C514 /* ShowMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF84B2128A94D00B6C514 /* ShowMenuViewController.swift */,
 			);
 			path = ShowMenu;
 			sourceTree = "<group>";
@@ -264,6 +317,7 @@
 		E48BF8312128A2EC00B6C514 /* ShowMeal */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8492128A94300B6C514 /* ShowMealViewController.swift */,
 			);
 			path = ShowMeal;
 			sourceTree = "<group>";
@@ -271,6 +325,7 @@
 		E48BF8322128A2F300B6C514 /* ShowProduct */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF84D2128A95600B6C514 /* ShowProductViewController.swift */,
 			);
 			path = ShowProduct;
 			sourceTree = "<group>";
@@ -278,6 +333,7 @@
 		E48BF8332128A30900B6C514 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF85F2128A9B800B6C514 /* ShoppingCartViewController.swift */,
 			);
 			path = ShoppingCart;
 			sourceTree = "<group>";
@@ -285,6 +341,7 @@
 		E48BF8342128A31100B6C514 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF83E2128A5CD00B6C514 /* PaymentViewController.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -292,6 +349,7 @@
 		E48BF8352128A31900B6C514 /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8432128A92400B6C514 /* GraphsViewController.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -299,6 +357,7 @@
 		E48BF8362128A32100B6C514 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF8472128A93600B6C514 /* MarketViewController.swift */,
 			);
 			path = Market;
 			sourceTree = "<group>";
@@ -306,6 +365,7 @@
 		E48BF8372128A32700B6C514 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E48BF85D2128A9B000B6C514 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -324,6 +384,14 @@
 				E48BF83C2128A42A00B6C514 /* NavigationConstants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E48BF8402128A5D700B6C514 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E48BF8412128A5E200B6C514 /* Payment.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +481,7 @@
 				E48BF80D21288A8200B6C514 /* LaunchScreen.storyboard in Resources */,
 				E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */,
 				E48BF80821288A8100B6C514 /* Main.storyboard in Resources */,
+				E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,11 +539,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovileHack/Pods-MovileHack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,10 +560,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48BF8562128A98C00B6C514 /* RegisterMenuViewController.swift in Sources */,
+				E48BF8542128A98100B6C514 /* RegisterMealViewController.swift in Sources */,
+				E48BF8482128A93600B6C514 /* MarketViewController.swift in Sources */,
+				E48BF8462128A92C00B6C514 /* LoginViewController.swift in Sources */,
+				E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */,
+				E48BF85E2128A9B000B6C514 /* SearchViewController.swift in Sources */,
+				E48BF85A2128A9A000B6C514 /* RegisterPurveyorViewController.swift in Sources */,
+				E48BF84E2128A95600B6C514 /* ShowProductViewController.swift in Sources */,
 				E48BF80521288A8100B6C514 /* ViewController.swift in Sources */,
+				E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */,
+				E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */,
+				E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */,
+				E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */,
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,
+				E48BF8662128A9D100B6C514 /* Model.swift in Sources */,
+				E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */,
+				E48BF8582128A99500B6C514 /* RegisterProductViewController.swift in Sources */,
+				E48BF84A2128A94300B6C514 /* ShowMealViewController.swift in Sources */,
+				E48BF83F2128A5CD00B6C514 /* PaymentViewController.swift in Sources */,
 				E48BF83A2128A3FB00B6C514 /* StoryboardExtension.swift in Sources */,
+				E48BF8642128A9C900B6C514 /* Serivce.swift in Sources */,
 				E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */,
+				E48BF8622128A9C200B6C514 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
