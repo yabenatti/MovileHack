@@ -12,16 +12,14 @@ class Product {
     // MARK: - Properties
     let id: String
     let name: String
-    let price: Double
     let expirationDate: Date
     let photoUrl: String?
     var photo: UIImage?
     
     // MARK: - Initializers
-    init(id: String, name: String, price: Double, expirationDate: Date, photoUrl: String?) {
+    init(id: String, name: String, expirationDate: Date, photoUrl: String?) {
         self.id = id
         self.name = name
-        self.price = price
         self.expirationDate = expirationDate
         self.photoUrl = photoUrl
         self.photo = nil
