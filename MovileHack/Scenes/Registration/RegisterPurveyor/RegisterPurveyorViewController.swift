@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterPurveyorViewController: UIViewController {
+class RegisterPurveyorViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

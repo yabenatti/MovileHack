@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowPurveyorViewController: UIViewController {
+class ShowPurveyorViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

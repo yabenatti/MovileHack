@@ -20,8 +20,8 @@
 		A7A0FDD42128C83400E76759 /* ProductSelectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD32128C83400E76759 /* ProductSelectionSectionHeaderView.swift */; };
 		A7A0FDD62128C85000E76759 /* ProductSelectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */; };
 		A7A0FDD82128C8D000E76759 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD72128C8D000E76759 /* BaseView.swift */; };
+		A7A0FDDA2128DD5400E76759 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD92128DD5400E76759 /* BaseViewController.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
-		E48BF80521288A8100B6C514 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80421288A8100B6C514 /* ViewController.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
 		E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80921288A8200B6C514 /* Assets.xcassets */; };
 		E48BF80D21288A8200B6C514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80B21288A8200B6C514 /* LaunchScreen.storyboard */; };
@@ -92,10 +92,10 @@
 		A7A0FDD32128C83400E76759 /* ProductSelectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		A7A0FDD72128C8D000E76759 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A7A0FDD92128DD5400E76759 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E48BF80421288A8100B6C514 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E48BF80721288A8100B6C514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E48BF80921288A8200B6C514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48BF80C21288A8200B6C514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -287,7 +287,6 @@
 				E48BF8232128A1F800B6C514 /* Services */,
 				E48BF8222128A1EF00B6C514 /* Models */,
 				E48BF80221288A8100B6C514 /* AppDelegate.swift */,
-				E48BF80421288A8100B6C514 /* ViewController.swift */,
 				E48BF80621288A8100B6C514 /* Main.storyboard */,
 				E48BF80921288A8200B6C514 /* Assets.xcassets */,
 				E48BF80B21288A8200B6C514 /* LaunchScreen.storyboard */,
@@ -333,6 +332,7 @@
 		E48BF8252128A25F00B6C514 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A7A0FDD92128DD5400E76759 /* BaseViewController.swift */,
 				E48BF8812128C6A400B6C514 /* Profile */,
 				E48BF87A2128C61000B6C514 /* Products */,
 				E48BF8752128C55C00B6C514 /* TabBar */,
@@ -776,12 +776,12 @@
 				E48BF85E2128A9B000B6C514 /* SearchViewController.swift in Sources */,
 				E48BF85A2128A9A000B6C514 /* RegisterPurveyorViewController.swift in Sources */,
 				E48BF84E2128A95600B6C514 /* ShowProductViewController.swift in Sources */,
-				E48BF80521288A8100B6C514 /* ViewController.swift in Sources */,
 				E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */,
 				E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */,
 				E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */,
 				E48BF8722128BB8200B6C514 /* Product.swift in Sources */,
 				E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */,
+				A7A0FDDA2128DD5400E76759 /* BaseViewController.swift in Sources */,
 				A74423DD2128B40A00FDF37D /* MyMealsViewController.swift in Sources */,
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,
 				E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */,

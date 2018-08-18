@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterRestaurantViewController: UIViewController {
+class RegisterRestaurantViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

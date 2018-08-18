@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductSelectionViewController: UIViewController {
+class ProductSelectionViewController: BaseViewController {
     //FIXME: Implement proper productOptions
     private class ProductOption {
         let id: String

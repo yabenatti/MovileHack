@@ -9,14 +9,13 @@
 import UIKit
 
 extension UIColor {
-    public class var tabbarRed : UIColor {
-        return UIColor(hex: "BC2026", alpha: 1)
+    public class var movilePink : UIColor {
+        return UIColor(hex: "F92D6C", alpha: 1)
     }
 }
 
 extension UIColor {
-    
-    //MARK: - Convert HEX to RGB
+    //Convert HEX to RGB
     convenience init(hex: String, alpha: CGFloat) {
         let scanner = Scanner(string: hex)
         scanner.scanLocation = 0

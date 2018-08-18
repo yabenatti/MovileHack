@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowMealViewController: UIViewController {
+class ShowMealViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

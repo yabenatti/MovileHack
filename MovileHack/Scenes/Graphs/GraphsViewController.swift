@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GraphsViewController: UIViewController {
+class GraphsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

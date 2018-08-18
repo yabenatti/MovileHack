@@ -33,27 +33,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-zk-YVZ">
-                                <rect key="frame" x="16" y="557.5" width="38.5" height="19.5"/>
+                                <rect key="frame" x="16" y="549.5" width="38.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-Cy-k3Z">
-                                <rect key="frame" x="62.5" y="558" width="39.5" height="19.5"/>
+                                <rect key="frame" x="62.5" y="550" width="39.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-Ph-4Ya">
-                                <rect key="frame" x="265" y="553" width="94" height="29"/>
+                                <rect key="frame" x="265" y="545" width="94" height="29"/>
                                 <connections>
                                     <action selector="didTapStepperButton:" destination="SWg-Q4-UEy" eventType="valueChanged" id="Wj3-uQ-o5L"/>
                                 </connections>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgI-1X-tVh">
-                                <rect key="frame" x="16" y="609" width="343" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgI-1X-tVh" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="601" width="343" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Lmi-iF-q1c"/>
+                                    <constraint firstAttribute="height" constant="50" id="Lmi-iF-q1c"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>

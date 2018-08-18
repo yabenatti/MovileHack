@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterMenuViewController: UIViewController {
+class RegisterMenuViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

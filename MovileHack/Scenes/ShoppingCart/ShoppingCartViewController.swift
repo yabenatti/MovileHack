@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingCartViewController: UIViewController {
+class ShoppingCartViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
