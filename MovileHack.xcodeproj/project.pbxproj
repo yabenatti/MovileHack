@@ -39,6 +39,8 @@
 		E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF85F2128A9B800B6C514 /* ShoppingCartViewController.swift */; };
 		E48BF8622128A9C200B6C514 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8612128A9C200B6C514 /* Parser.swift */; };
 		E48BF8642128A9C900B6C514 /* Serivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8632128A9C900B6C514 /* Serivce.swift */; };
+		E48BF8662128A9D100B6C514 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8652128A9D100B6C514 /* Model.swift */; };
+		E48BF8682128B3C200B6C514 /* MealQuantity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF8672128B3C200B6C514 /* MealQuantity.storyboard */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		E48BF85F2128A9B800B6C514 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E48BF8612128A9C200B6C514 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		E48BF8632128A9C900B6C514 /* Serivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serivce.swift; sourceTree = "<group>"; };
+		E48BF8652128A9D100B6C514 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E48BF8672128B3C200B6C514 /* MealQuantity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealQuantity.storyboard; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -407,6 +411,7 @@
 				E48BF8412128A5E200B6C514 /* Payment.storyboard */,
 				A74423D72128AA3600FDF37D /* ShowProduct.storyboard */,
 				A74423D92128B37C00FDF37D /* MyMeals.storyboard */,
+				E48BF8672128B3C200B6C514 /* MealQuantity.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				A74423D82128AA3600FDF37D /* ShowProduct.storyboard in Resources */,
 				E48BF80D21288A8200B6C514 /* LaunchScreen.storyboard in Resources */,
 				E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */,
+				E48BF8682128B3C200B6C514 /* MealQuantity.storyboard in Resources */,
 				E48BF80821288A8100B6C514 /* Main.storyboard in Resources */,
 				E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */,
 				A74423DA2128B37C00FDF37D /* MyMeals.storyboard in Resources */,
@@ -787,7 +793,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = MovileHack/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasminbenatti.MovileHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -803,7 +812,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = MovileHack/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasminbenatti.MovileHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -819,7 +831,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovileHackTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasminbenatti.MovileHackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -836,7 +852,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovileHackTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasminbenatti.MovileHackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
