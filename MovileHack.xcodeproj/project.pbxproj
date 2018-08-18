@@ -45,6 +45,7 @@
 		E48BF86A2128B68100B6C514 /* MealQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8692128B68100B6C514 /* MealQuantityViewController.swift */; };
 		E48BF86C2128B7DF00B6C514 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF86B2128B7DF00B6C514 /* ProductSelectionViewController.swift */; };
 		E48BF86E2128B7F600B6C514 /* ProductSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF86D2128B7F600B6C514 /* ProductSelection.storyboard */; };
+		E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF86F2128B95100B6C514 /* ImageUtils.swift */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		E48BF8692128B68100B6C514 /* MealQuantityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealQuantityViewController.swift; sourceTree = "<group>"; };
 		E48BF86B2128B7DF00B6C514 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionViewController.swift; sourceTree = "<group>"; };
 		E48BF86D2128B7F600B6C514 /* ProductSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductSelection.storyboard; sourceTree = "<group>"; };
+		E48BF86F2128B95100B6C514 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -437,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				E48BF83C2128A42A00B6C514 /* NavigationConstants.swift */,
+				E48BF86F2128B95100B6C514 /* ImageUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				E48BF8642128A9C900B6C514 /* Serivce.swift in Sources */,
 				E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */,
 				E48BF8622128A9C200B6C514 /* Parser.swift in Sources */,
+				E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

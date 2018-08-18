@@ -12,6 +12,7 @@ class Meal {
     // MARK: - Properties
     let id: String
     let name: String
+    let mealDescription: String?
     let photoUrl: String?
     var photo: UIImage?
     
@@ -21,6 +22,7 @@ class Meal {
         self.name = name
         self.photoUrl = photoUrl
         self.photo = nil
+        self.mealDescription = nil
     }
     
     // FIXME: Implement Photo download
