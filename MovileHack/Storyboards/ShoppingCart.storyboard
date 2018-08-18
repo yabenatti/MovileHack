@@ -17,10 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="ePz-yr-asG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ah7-Nz-Npr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-1T-ynl">
+                                <rect key="frame" x="16" y="437" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-Vu-0kM">
+                                <rect key="frame" x="40" y="474" width="295" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="OGg-Xv-HDu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapPayButton:" destination="ax1-GJ-hsV" eventType="touchUpInside" id="GPa-2H-iZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AR0-fD-f5S" firstAttribute="trailing" secondItem="5Ge-Vu-0kM" secondAttribute="trailing" constant="40" id="1qB-TR-m3z"/>
+                            <constraint firstItem="Ah7-Nz-Npr" firstAttribute="top" secondItem="AR0-fD-f5S" secondAttribute="top" id="IGt-Ac-hoh"/>
+                            <constraint firstItem="Ah7-Nz-Npr" firstAttribute="leading" secondItem="AR0-fD-f5S" secondAttribute="leading" id="J3x-TC-n7d"/>
+                            <constraint firstItem="AR0-fD-f5S" firstAttribute="bottom" secondItem="5Ge-Vu-0kM" secondAttribute="bottom" constant="24" id="KUo-w4-aeS"/>
+                            <constraint firstItem="AR0-fD-f5S" firstAttribute="trailing" secondItem="Ah7-Nz-Npr" secondAttribute="trailing" id="XKz-Tf-dWV"/>
+                            <constraint firstItem="5Ge-Vu-0kM" firstAttribute="leading" secondItem="AR0-fD-f5S" secondAttribute="leading" constant="40" id="YSu-OQ-jXf"/>
+                            <constraint firstItem="5Ge-Vu-0kM" firstAttribute="top" secondItem="vZe-1T-ynl" secondAttribute="bottom" constant="16" id="cId-pt-P18"/>
+                            <constraint firstItem="vZe-1T-ynl" firstAttribute="leading" secondItem="AR0-fD-f5S" secondAttribute="leading" constant="16" id="hdg-Yd-X1G"/>
+                            <constraint firstItem="vZe-1T-ynl" firstAttribute="top" secondItem="Ah7-Nz-Npr" secondAttribute="bottom" constant="8" id="l1i-Fz-P5x"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AR0-fD-f5S"/>
                     </view>
                     <navigationItem key="navigationItem" id="YE0-ZB-Zvr"/>
+                    <connections>
+                        <outlet property="payButton" destination="5Ge-Vu-0kM" id="6nT-Tc-2Su"/>
+                        <outlet property="tableView" destination="Ah7-Nz-Npr" id="2zq-nf-JRL"/>
+                        <outlet property="totalLabel" destination="vZe-1T-ynl" id="gVf-br-XG1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRG-ki-VeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

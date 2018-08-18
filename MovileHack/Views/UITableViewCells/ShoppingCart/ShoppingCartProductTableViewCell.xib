@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ShoppingCartProductTableViewCell" customModule="MovileHack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0T-Lv-tqo">
+                        <rect key="frame" x="16" y="4" width="54" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh Food " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNR-Or-ytU">
+                        <rect key="frame" x="16" y="25.5" width="76.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 un" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-H4-hq1">
+                        <rect key="frame" x="197" y="13" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 10,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMT-5e-BkH">
+                        <rect key="frame" x="243" y="13" width="61" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="d0T-Lv-tqo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6EG-mN-58s"/>
+                    <constraint firstAttribute="trailing" secondItem="AMT-5e-BkH" secondAttribute="trailing" constant="16" id="CM8-WU-6oM"/>
+                    <constraint firstItem="0v3-H4-hq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0T-Lv-tqo" secondAttribute="trailing" constant="8" id="HMX-ar-Vd6"/>
+                    <constraint firstItem="0v3-H4-hq1" firstAttribute="centerY" secondItem="AMT-5e-BkH" secondAttribute="centerY" id="J9t-Wd-kwF"/>
+                    <constraint firstItem="d0T-Lv-tqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="M2D-RK-QBk"/>
+                    <constraint firstItem="AMT-5e-BkH" firstAttribute="leading" secondItem="0v3-H4-hq1" secondAttribute="trailing" constant="8" id="Mnt-wh-hUi"/>
+                    <constraint firstItem="0v3-H4-hq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KNR-Or-ytU" secondAttribute="trailing" constant="8" id="Nq9-gC-uOb"/>
+                    <constraint firstItem="KNR-Or-ytU" firstAttribute="top" secondItem="d0T-Lv-tqo" secondAttribute="bottom" constant="2" id="QdI-MV-RqU"/>
+                    <constraint firstItem="AMT-5e-BkH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ru3-Xo-fQn"/>
+                    <constraint firstItem="KNR-Or-ytU" firstAttribute="leading" secondItem="d0T-Lv-tqo" secondAttribute="leading" id="rsg-cu-Z1L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productNameLabel" destination="d0T-Lv-tqo" id="a4I-0n-kwm"/>
+                <outlet property="purveyorNameLabel" destination="KNR-Or-ytU" id="SZy-lL-AyC"/>
+                <outlet property="totalPriceLabel" destination="AMT-5e-BkH" id="79V-aw-hp9"/>
+                <outlet property="totalQuantityLabel" destination="0v3-H4-hq1" id="iIE-ts-zII"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
