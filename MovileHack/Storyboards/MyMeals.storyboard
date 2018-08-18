@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="Z4Q-MW-KkV" customClass="MyMealsViewController" customModule="MovileHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="erJ-ga-NMz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6bc-ie-2Pc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -41,12 +41,15 @@
             </objects>
             <point key="canvasLocation" x="1215.2" y="268.51574212893553"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pratos-->
         <scene sceneID="z2m-Vv-3zV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XNm-xN-lEz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pratos" image="meals_icon" id="Yq2-ls-i2A"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5bF-Hm-Igr">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5bF-Hm-Igr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -60,4 +63,7 @@
             <point key="canvasLocation" x="276" y="268.51574212893553"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meals_icon" width="19" height="18"/>
+    </resources>
 </document>

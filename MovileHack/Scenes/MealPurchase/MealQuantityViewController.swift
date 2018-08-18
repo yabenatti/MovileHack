@@ -11,14 +11,24 @@ import UIKit
 class MealQuantityViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var mealImageView: UIImageView!
+    @IBOutlet weak var mealImageView: UIImageView! {
+        didSet {
+            self.mealImageView.image = UIImage(named: "meal_default")
+            self.mealImageView.layer.cornerRadius = self.mealImageView.frame.size.height/2
+            self.mealImageView.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var mealProductsAndQuantityLabel: UILabel!
     @IBOutlet weak var mealQuantityTitleLabel: UILabel! {
         didSet {
-            mealQuantityLabel.text = "QTD:"
+            mealQuantityTitleLabel.text = "QTD:"
         }
     }
-    @IBOutlet weak var mealQuantityLabel: UILabel!
+    @IBOutlet weak var mealQuantityLabel: UILabel! {
+        didSet {
+            mealQuantityLabel.text = "0"
+        }
+    }
     @IBOutlet weak var mealQuantityStepper: UIStepper!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
@@ -34,6 +44,7 @@ class MealQuantityViewController: UIViewController {
         super.viewDidLoad()
         
         if let meal = self.meal {
+            self.title = meal.name
             self.populateView(meal)
         }
     }
@@ -45,6 +56,7 @@ class MealQuantityViewController: UIViewController {
     
     // MARK: - Layout
     func populateView(_ meal: Meal) {
+        //Photo
         if let imageUrl = meal.imageUrl {
             ImageUtils.downloadImage(urlString: imageUrl) { (image) in
                 if let image = image {
@@ -53,11 +65,14 @@ class MealQuantityViewController: UIViewController {
             }
         }
         
+        //Meal Products and Quantity
         var mealProductsAndQuantityLabelString = ""
         for product in meal.products {
             mealProductsAndQuantityLabelString.append(product.name + "\n")
         }
         self.mealProductsAndQuantityLabel.text = mealProductsAndQuantityLabelString
+        self.mealProductsAndQuantityLabel.setNeedsLayout()
+        self.mealProductsAndQuantityLabel.layoutIfNeeded()
     }
     
     // MARK: - IBActions
