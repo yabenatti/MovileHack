@@ -57,7 +57,7 @@ extension MyMealsViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let mealQuantityViewController = UIStoryboard(name: .MyMeals).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
+        if let mealQuantityViewController = UIStoryboard(name: .MealQuantity).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
             mealQuantityViewController.meal = self.meals[indexPath.row]
             self.navigationController?.pushViewController(mealQuantityViewController, animated: true)
         }

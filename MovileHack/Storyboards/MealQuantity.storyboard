@@ -38,6 +38,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-Cy-k3Z">
+                                <rect key="frame" x="63.5" y="556" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-Ph-4Ya">
                                 <rect key="frame" x="265" y="552" width="94" height="29"/>
                                 <connections>
@@ -62,8 +68,11 @@
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="mgI-1X-tVh" secondAttribute="trailing" constant="16" id="HTJ-kh-C0P"/>
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="bottom" secondItem="mgI-1X-tVh" secondAttribute="bottom" constant="16" id="L5F-W7-2ep"/>
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="IjE-Ph-4Ya" secondAttribute="trailing" constant="16" id="MuC-yP-7L5"/>
+                            <constraint firstItem="IVS-Cy-k3Z" firstAttribute="centerY" secondItem="QGr-zk-YVZ" secondAttribute="centerY" id="QUg-A1-xJ6"/>
                             <constraint firstItem="C9n-Rb-tdC" firstAttribute="leading" secondItem="Hn0-fV-3u6" secondAttribute="leading" constant="16" id="SPd-H2-cjJ"/>
                             <constraint firstItem="l11-4H-8V8" firstAttribute="centerX" secondItem="Hn0-fV-3u6" secondAttribute="centerX" id="XHB-3B-vU8"/>
+                            <constraint firstItem="IVS-Cy-k3Z" firstAttribute="leading" secondItem="QGr-zk-YVZ" secondAttribute="trailing" constant="8" id="aCZ-Gi-ahH"/>
+                            <constraint firstItem="IjE-Ph-4Ya" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IVS-Cy-k3Z" secondAttribute="trailing" constant="16" id="agm-Ro-2PC"/>
                             <constraint firstItem="IjE-Ph-4Ya" firstAttribute="centerY" secondItem="QGr-zk-YVZ" secondAttribute="centerY" id="clF-2N-vJU"/>
                             <constraint firstItem="IjE-Ph-4Ya" firstAttribute="top" secondItem="C9n-Rb-tdC" secondAttribute="bottom" priority="250" constant="16" id="fbk-NV-yd8"/>
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="C9n-Rb-tdC" secondAttribute="trailing" constant="16" id="hrK-2A-dR2"/>
@@ -78,8 +87,9 @@
                     <connections>
                         <outlet property="mealImageView" destination="l11-4H-8V8" id="fZk-1n-Vs1"/>
                         <outlet property="mealProductsAndQuantityLabel" destination="C9n-Rb-tdC" id="Qt3-lG-iEr"/>
-                        <outlet property="mealQuantityLabel" destination="QGr-zk-YVZ" id="Q5D-Fl-HjV"/>
+                        <outlet property="mealQuantityLabel" destination="IVS-Cy-k3Z" id="IGI-k5-PF8"/>
                         <outlet property="mealQuantityStepper" destination="IjE-Ph-4Ya" id="Vgy-iE-JZn"/>
+                        <outlet property="mealQuantityTitleLabel" destination="QGr-zk-YVZ" id="v0O-3W-YiR"/>
                         <outlet property="nextButton" destination="mgI-1X-tVh" id="Eym-cj-jOm"/>
                     </connections>
                 </viewController>

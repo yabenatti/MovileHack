@@ -13,11 +13,12 @@ class MealQuantityViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealProductsAndQuantityLabel: UILabel!
-    @IBOutlet weak var mealQuantityLabel: UILabel! {
+    @IBOutlet weak var mealQuantityTitleLabel: UILabel! {
         didSet {
             mealQuantityLabel.text = "QTD:"
         }
     }
+    @IBOutlet weak var mealQuantityLabel: UILabel!
     @IBOutlet weak var mealQuantityStepper: UIStepper!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
