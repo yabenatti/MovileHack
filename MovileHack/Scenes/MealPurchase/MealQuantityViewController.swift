@@ -52,6 +52,12 @@ class MealQuantityViewController: UIViewController {
                 }
             }
         }
+        
+        var mealProductsAndQuantityLabelString = ""
+        for product in meal.products {
+            mealProductsAndQuantityLabelString.append(product.name + "\n")
+        }
+        self.mealProductsAndQuantityLabel.text = mealProductsAndQuantityLabelString
     }
     
     // MARK: - IBActions
@@ -62,4 +68,11 @@ class MealQuantityViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    @IBAction func didTapStepperButton(_ sender: Any) {
+        if let stepper = sender as? UIStepper {
+            self.mealQuantityLabel.text = Int(stepper.value).description
+        }
+    }
+    
 }

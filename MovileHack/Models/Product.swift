@@ -1,32 +1,33 @@
 //
-//  Meal.swift
+//  Product.swift
 //  MovileHack
 //
-//  Created by Movile Hack on 18/08/2018.
+//  Created by Yasmin Benatti on 2018-08-18.
 //  Copyright © 2018 Yasmin Benatti. All rights reserved.
 //
 
 import UIKit
 
-class Meal {
+class Product {
     // MARK: - Properties
     let id: String
     let name: String
-    let mealDescription: String?
+    let price: Double
+    let expirationDate: Date
     let photoUrl: String?
     var photo: UIImage?
-    var products = [Product]()
     
     // MARK: - Initializers
-    init(id: String, name: String, photoUrl: String?) {
+    init(id: String, name: String, price: Double, expirationDate: Date, photoUrl: String?) {
         self.id = id
         self.name = name
+        self.price = price
+        self.expirationDate = expirationDate
         self.photoUrl = photoUrl
         self.photo = nil
-        self.mealDescription = nil
     }
     
-    func getMealImage(completion: @escaping((_ image :UIImage?)->())) {
+    func getProductImage(completion: @escaping((_ image :UIImage?)->())) {
         guard let urlString = self.photoUrl, let photoUrl = URL(string: urlString) else {
             completion(nil)
             return

@@ -46,6 +46,7 @@
 		E48BF86C2128B7DF00B6C514 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF86B2128B7DF00B6C514 /* ProductSelectionViewController.swift */; };
 		E48BF86E2128B7F600B6C514 /* ProductSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF86D2128B7F600B6C514 /* ProductSelection.storyboard */; };
 		E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF86F2128B95100B6C514 /* ImageUtils.swift */; };
+		E48BF8722128BB8200B6C514 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF8712128BB8200B6C514 /* Product.swift */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		E48BF86B2128B7DF00B6C514 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionViewController.swift; sourceTree = "<group>"; };
 		E48BF86D2128B7F600B6C514 /* ProductSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductSelection.storyboard; sourceTree = "<group>"; };
 		E48BF86F2128B95100B6C514 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		E48BF8712128BB8200B6C514 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				A74423DE2128B4AF00FDF37D /* Meal.swift */,
+				E48BF8712128BB8200B6C514 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */,
 				E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */,
 				E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */,
+				E48BF8722128BB8200B6C514 /* Product.swift in Sources */,
 				E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */,
 				A74423DD2128B40A00FDF37D /* MyMealsViewController.swift in Sources */,
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,

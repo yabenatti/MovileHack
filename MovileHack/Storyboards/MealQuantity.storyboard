@@ -40,6 +40,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-Ph-4Ya">
                                 <rect key="frame" x="265" y="552" width="94" height="29"/>
+                                <connections>
+                                    <action selector="didTapStepperButton:" destination="SWg-Q4-UEy" eventType="valueChanged" id="Wj3-uQ-o5L"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgI-1X-tVh">
                                 <rect key="frame" x="16" y="609" width="343" height="42"/>
