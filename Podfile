@@ -6,6 +6,8 @@ target 'MovileHack' do
   use_frameworks!
 
   # Pods for MovileHack
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.1'
 
   target 'MovileHackTests' do
     inherit! :search_paths
