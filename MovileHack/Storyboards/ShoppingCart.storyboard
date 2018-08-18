@@ -19,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ah7-Nz-Npr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="429"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-1T-ynl">
-                                <rect key="frame" x="16" y="437" width="42" height="21"/>
+                                <rect key="frame" x="16" y="445" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-Vu-0kM">
-                                <rect key="frame" x="40" y="474" width="295" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-Vu-0kM" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="40" y="482" width="295" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="OGg-Xv-HDu"/>
+                                    <constraint firstAttribute="height" constant="48" id="OGg-Xv-HDu"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>

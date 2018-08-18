@@ -16,6 +16,8 @@ class ShoppingCartViewController: BaseViewController {
         didSet {
             self.tableView.dataSource = self
             
+            self.tableView.separatorStyle = .none
+            
             self.tableView.register(ShoppingCartProductTableViewCell.self, forCellReuseIdentifier: String(describing: ShoppingCartProductTableViewCell.self))
             self.tableView.register(UINib(nibName: String(describing: ShoppingCartProductTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ShoppingCartProductTableViewCell.self))
         }
