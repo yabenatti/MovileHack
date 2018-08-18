@@ -12,6 +12,13 @@ class MyMealsViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var myMealsTableView: UITableView!
     
+    // MARK: - Variables
+    private var meals = [Meal]() {
+        didSet {
+            self.myMealsTableView.reloadData()
+        }
+    }
+    
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,6 +12,8 @@
 		A74423DA2128B37C00FDF37D /* MyMeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74423D92128B37C00FDF37D /* MyMeals.storyboard */; };
 		A74423DD2128B40A00FDF37D /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74423DC2128B40A00FDF37D /* MyMealsViewController.swift */; };
 		A74423DF2128B4AF00FDF37D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74423DE2128B4AF00FDF37D /* Meal.swift */; };
+		A74423E52128B5A400FDF37D /* MyMealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74423E32128B5A400FDF37D /* MyMealsTableViewCell.swift */; };
+		A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74423E42128B5A400FDF37D /* MyMealsTableViewCell.xib */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80521288A8100B6C514 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80421288A8100B6C514 /* ViewController.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		A74423D92128B37C00FDF37D /* MyMeals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyMeals.storyboard; sourceTree = "<group>"; };
 		A74423DC2128B40A00FDF37D /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
 		A74423DE2128B4AF00FDF37D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		A74423E32128B5A400FDF37D /* MyMealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsTableViewCell.swift; sourceTree = "<group>"; };
+		A74423E42128B5A400FDF37D /* MyMealsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMealsTableViewCell.xib; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,31 @@
 			path = MealPurchase;
 			sourceTree = "<group>";
 		};
+		A74423E02128B57800FDF37D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A74423E12128B58800FDF37D /* UITableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A74423E12128B58800FDF37D /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A74423E22128B59100FDF37D /* MyMeals */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		A74423E22128B59100FDF37D /* MyMeals */ = {
+			isa = PBXGroup;
+			children = (
+				A74423E32128B5A400FDF37D /* MyMealsTableViewCell.swift */,
+				A74423E42128B5A400FDF37D /* MyMealsTableViewCell.xib */,
+			);
+			path = MyMeals;
+			sourceTree = "<group>";
+		};
 		D6E716C5279F7F31EB54EA63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +204,7 @@
 				E48BF83B2128A41200B6C514 /* Utils */,
 				E48BF8382128A35D00B6C514 /* Extensions */,
 				E48BF8252128A25F00B6C514 /* Scenes */,
+				A74423E02128B57800FDF37D /* Views */,
 				E48BF8242128A1FD00B6C514 /* Parsers */,
 				E48BF8232128A1F800B6C514 /* Services */,
 				E48BF8222128A1EF00B6C514 /* Models */,
@@ -508,6 +538,7 @@
 				E48BF80821288A8100B6C514 /* Main.storyboard in Resources */,
 				E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */,
 				A74423DA2128B37C00FDF37D /* MyMeals.storyboard in Resources */,
+				A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +654,7 @@
 				A74423DD2128B40A00FDF37D /* MyMealsViewController.swift in Sources */,
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,
 				E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */,
+				A74423E52128B5A400FDF37D /* MyMealsTableViewCell.swift in Sources */,
 				E48BF8582128A99500B6C514 /* RegisterProductViewController.swift in Sources */,
 				E48BF84A2128A94300B6C514 /* ShowMealViewController.swift in Sources */,
 				E48BF83F2128A5CD00B6C514 /* PaymentViewController.swift in Sources */,
