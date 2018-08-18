@@ -63,8 +63,13 @@ class MealQuantityViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func didTapNextButton(_ sender: Any) {
+        guard let meal = self.meal else {
+            return
+        }
+        
         let storyboard = UIStoryboard(name: .ProductSelection)
         if let vc = storyboard.instantiateViewController(withIdentifier: ViewControllerName.ProductSelectionViewController) as? ProductSelectionViewController {
+            vc.products = meal.products
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

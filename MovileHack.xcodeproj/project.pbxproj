@@ -15,6 +15,11 @@
 		A74423E52128B5A400FDF37D /* MyMealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74423E32128B5A400FDF37D /* MyMealsTableViewCell.swift */; };
 		A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74423E42128B5A400FDF37D /* MyMealsTableViewCell.xib */; };
 		A74423E92128BFA600FDF37D /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74423E82128BFA600FDF37D /* CTAButton.swift */; };
+		A7A0FDCF2128C5CC00E76759 /* ProductSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDCD2128C5CC00E76759 /* ProductSelectionTableViewCell.swift */; };
+		A7A0FDD02128C5CC00E76759 /* ProductSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDCE2128C5CC00E76759 /* ProductSelectionTableViewCell.xib */; };
+		A7A0FDD42128C83400E76759 /* ProductSelectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD32128C83400E76759 /* ProductSelectionSectionHeaderView.swift */; };
+		A7A0FDD62128C85000E76759 /* ProductSelectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */; };
+		A7A0FDD82128C8D000E76759 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD72128C8D000E76759 /* BaseView.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80521288A8100B6C514 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80421288A8100B6C514 /* ViewController.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
@@ -73,6 +78,11 @@
 		A74423E32128B5A400FDF37D /* MyMealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsTableViewCell.swift; sourceTree = "<group>"; };
 		A74423E42128B5A400FDF37D /* MyMealsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMealsTableViewCell.xib; sourceTree = "<group>"; };
 		A74423E82128BFA600FDF37D /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		A7A0FDCD2128C5CC00E76759 /* ProductSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		A7A0FDCE2128C5CC00E76759 /* ProductSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		A7A0FDD32128C83400E76759 /* ProductSelectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionSectionHeaderView.swift; sourceTree = "<group>"; };
+		A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectionSectionHeaderView.xib; sourceTree = "<group>"; };
+		A7A0FDD72128C8D000E76759 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 		A74423E02128B57800FDF37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7A0FDD12128C80400E76759 /* Table Headers */,
 				A74423E72128BF9000FDF37D /* UI */,
 				A74423E12128B58800FDF37D /* UITableViewCells */,
 			);
@@ -165,6 +176,7 @@
 		A74423E12128B58800FDF37D /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				A74423EA2128C44C00FDF37D /* ProductSelection */,
 				A74423E22128B59100FDF37D /* MyMeals */,
 			);
 			path = UITableViewCells;
@@ -183,8 +195,35 @@
 			isa = PBXGroup;
 			children = (
 				A74423E82128BFA600FDF37D /* CTAButton.swift */,
+				A7A0FDD72128C8D000E76759 /* BaseView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		A74423EA2128C44C00FDF37D /* ProductSelection */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0FDCD2128C5CC00E76759 /* ProductSelectionTableViewCell.swift */,
+				A7A0FDCE2128C5CC00E76759 /* ProductSelectionTableViewCell.xib */,
+			);
+			path = ProductSelection;
+			sourceTree = "<group>";
+		};
+		A7A0FDD12128C80400E76759 /* Table Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0FDD22128C81400E76759 /* ProductSelectionSectionHeaderView */,
+			);
+			path = "Table Headers";
+			sourceTree = "<group>";
+		};
+		A7A0FDD22128C81400E76759 /* ProductSelectionSectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0FDD32128C83400E76759 /* ProductSelectionSectionHeaderView.swift */,
+				A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */,
+			);
+			path = ProductSelectionSectionHeaderView;
 			sourceTree = "<group>";
 		};
 		D6E716C5279F7F31EB54EA63 /* Pods */ = {
@@ -563,7 +602,9 @@
 				E48BF80821288A8100B6C514 /* Main.storyboard in Resources */,
 				E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */,
 				A74423DA2128B37C00FDF37D /* MyMeals.storyboard in Resources */,
+				A7A0FDD02128C5CC00E76759 /* ProductSelectionTableViewCell.xib in Resources */,
 				A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */,
+				A7A0FDD62128C85000E76759 /* ProductSelectionSectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,11 +705,14 @@
 			files = (
 				E48BF8562128A98C00B6C514 /* RegisterMenuViewController.swift in Sources */,
 				E48BF8542128A98100B6C514 /* RegisterMealViewController.swift in Sources */,
+				A7A0FDD42128C83400E76759 /* ProductSelectionSectionHeaderView.swift in Sources */,
 				E48BF8482128A93600B6C514 /* MarketViewController.swift in Sources */,
 				E48BF8462128A92C00B6C514 /* LoginViewController.swift in Sources */,
 				E48BF86C2128B7DF00B6C514 /* ProductSelectionViewController.swift in Sources */,
 				E48BF86A2128B68100B6C514 /* MealQuantityViewController.swift in Sources */,
 				E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */,
+				A7A0FDCF2128C5CC00E76759 /* ProductSelectionTableViewCell.swift in Sources */,
+				A7A0FDD82128C8D000E76759 /* BaseView.swift in Sources */,
 				A74423DF2128B4AF00FDF37D /* Meal.swift in Sources */,
 				E48BF85E2128A9B000B6C514 /* SearchViewController.swift in Sources */,
 				E48BF85A2128A9A000B6C514 /* RegisterPurveyorViewController.swift in Sources */,

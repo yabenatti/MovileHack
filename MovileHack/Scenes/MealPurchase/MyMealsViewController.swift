@@ -33,7 +33,9 @@ class MyMealsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.meals.append(Meal(id: "123123123", name: "Frango Frito", imageUrl: nil))
+        let meal = Meal(id: "123123123", name: "Salada de Frutas", imageUrl: nil)
+        meal.products = [Product(id: "123812", name: "Banana", price: 5.99, expirationDate: Date(), photoUrl: nil), Product(id: "19028312", name: "Maça", price: 4.99, expirationDate: Date(), photoUrl: nil)]
+        self.meals.append(meal)
     }
 }
 
