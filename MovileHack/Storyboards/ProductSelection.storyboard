@@ -17,10 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="M61-TU-egM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-Hg-Nbn" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wqT-Z9-ZOr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uyb-NY-837">
+                                <rect key="frame" x="0.0" y="64" width="375" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DbP-BZ-6aW" firstAttribute="trailing" secondItem="4h4-Hg-Nbn" secondAttribute="trailing" id="2v7-Bi-qla"/>
+                            <constraint firstItem="4h4-Hg-Nbn" firstAttribute="top" secondItem="uyb-NY-837" secondAttribute="bottom" id="4wy-8v-sCY"/>
+                            <constraint firstItem="DbP-BZ-6aW" firstAttribute="bottom" secondItem="4h4-Hg-Nbn" secondAttribute="bottom" id="DH1-Y4-y0u"/>
+                            <constraint firstItem="uyb-NY-837" firstAttribute="leading" secondItem="DbP-BZ-6aW" secondAttribute="leading" id="Mih-ky-kfv"/>
+                            <constraint firstItem="DbP-BZ-6aW" firstAttribute="trailing" secondItem="uyb-NY-837" secondAttribute="trailing" id="bk0-B7-3ad"/>
+                            <constraint firstItem="uyb-NY-837" firstAttribute="top" secondItem="DbP-BZ-6aW" secondAttribute="top" id="mdE-sc-3Rg"/>
+                            <constraint firstItem="4h4-Hg-Nbn" firstAttribute="leading" secondItem="DbP-BZ-6aW" secondAttribute="leading" id="wzG-9I-gm9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DbP-BZ-6aW"/>
                     </view>
                     <navigationItem key="navigationItem" id="egf-Bp-KUY"/>
+                    <connections>
+                        <outlet property="addButton" destination="4h4-Hg-Nbn" id="6la-R4-A9j"/>
+                        <outlet property="productsTableView" destination="uyb-NY-837" id="KuO-z2-RGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awf-wX-qBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

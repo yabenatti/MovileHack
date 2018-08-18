@@ -9,27 +9,55 @@
 import UIKit
 
 class ProductSelectionViewController: UIViewController {
-
+    class ProductSelectionSection {
+        let product: Product
+        //FIXME: Implement proper productOptions
+        var productOptions: [String]
+        
+        init(product: Product, productOptions: [String]) {
+            self.product = product
+            self.productOptions = productOptions
+        }
+    }
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var productsTableView: UITableView! {
+        didSet {
+            self.productsTableView.delegate = self
+            self.productsTableView.dataSource = self
+        }
+    }
+    @IBOutlet weak var addButton: CTAButton!
+    
+    // MARK: - Variables
+    var productSelectionSections = [ProductSelectionSection]() {
+        didSet {
+            self.productsTableView.reloadData()
+        }
+    }
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ProductSelectionViewController : UITableViewDelegate {
+
+}
+
+extension ProductSelectionViewController : UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.productSelectionSections.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.productSelectionSections[section].productOptions.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

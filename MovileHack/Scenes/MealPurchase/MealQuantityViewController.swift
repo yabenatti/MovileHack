@@ -15,14 +15,14 @@ class MealQuantityViewController: UIViewController {
     @IBOutlet weak var mealProductsAndQuantityLabel: UILabel!
     @IBOutlet weak var mealQuantityTitleLabel: UILabel! {
         didSet {
-            mealQuantityLabel.text = "QTD:"
+            self.mealQuantityLabel.text = "QTD:"
         }
     }
     @IBOutlet weak var mealQuantityLabel: UILabel!
     @IBOutlet weak var mealQuantityStepper: UIStepper!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
-            nextButton.setTitle("Próximo", for: .normal)
+            self.nextButton.setTitle("Próximo", for: .normal)
         }
     }
     
