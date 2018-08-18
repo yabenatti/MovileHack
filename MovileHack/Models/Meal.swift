@@ -9,11 +9,13 @@
 import UIKit
 
 class Meal {
+    // MARK: - Properties
     let id: String
     let name: String
     let photoUrl: String?
     var photo: UIImage?
     
+    // MARK: - Initializers
     init(id: String, name: String, photoUrl: String?) {
         self.id = id
         self.name = name
