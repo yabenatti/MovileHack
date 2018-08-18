@@ -16,11 +16,13 @@ class ImageUtils {
         }
         let request = URLRequest(url: url)
         let downloadTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            guard error == nil, let imageData = data, let image = UIImage(data: imageData) else {
-                completion(nil)
-                return
+            DispatchQueue.main.async {
+                guard error == nil, let imageData = data, let image = UIImage(data: imageData) else {
+                    completion(nil)
+                    return
+                }
+                completion(image)
             }
-            completion(image)
         }
         downloadTask.resume()
     }

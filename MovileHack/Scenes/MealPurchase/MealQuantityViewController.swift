@@ -51,22 +51,15 @@ class MealQuantityViewController: BaseViewController {
             self.title = meal.name
             self.populateView(meal)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(mealImageDownloaded(notification:)), name: .MealImageDownloaded, object: nil)
     }
     
     // MARK: - Layout
     func populateView(_ meal: Meal) {
         //Photo
-        if let imageUrl = meal.imageUrl {
-            ImageUtils.downloadImage(urlString: imageUrl) { (image) in
-                if let image = image {
-                    self.mealImageView.image = image
-                }
-            }
+        if let mealImage = meal.image {
+            self.mealImageView.image = mealImage
         }
         
         //Meal Products and Quantity
@@ -80,7 +73,6 @@ class MealQuantityViewController: BaseViewController {
     }
     
     // MARK: - IBActions
-    
     @IBAction func didTapNextButton(_ sender: Any) {
         guard let meal = self.meal else {
             return
@@ -99,4 +91,11 @@ class MealQuantityViewController: BaseViewController {
         }
     }
     
+    // MARK: - Notifications
+    @objc func mealImageDownloaded(notification: Notification) {
+        guard let meal = self.meal else {
+            return
+        }
+        self.populateView(meal)
+    }
 }

@@ -21,6 +21,8 @@
 		A7A0FDD62128C85000E76759 /* ProductSelectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */; };
 		A7A0FDD82128C8D000E76759 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD72128C8D000E76759 /* BaseView.swift */; };
 		A7A0FDDA2128DD5400E76759 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDD92128DD5400E76759 /* BaseViewController.swift */; };
+		A7A0FDDC2128E0D700E76759 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDDB2128E0D700E76759 /* NotificationName.swift */; };
+		A7A0FDDE2128E13E00E76759 /* NotificationCenterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDDD2128E13E00E76759 /* NotificationCenterKeys.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
 		E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80921288A8200B6C514 /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 		A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		A7A0FDD72128C8D000E76759 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A7A0FDD92128DD5400E76759 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A7A0FDDB2128E0D700E76759 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		A7A0FDDD2128E13E00E76759 /* NotificationCenterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKeys.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -506,6 +510,7 @@
 			children = (
 				E48BF8392128A3FB00B6C514 /* StoryboardExtension.swift */,
 				E4AC538B2128CACC002059C5 /* UIColorExtension.swift */,
+				A7A0FDDB2128E0D700E76759 /* NotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 			children = (
 				E48BF83C2128A42A00B6C514 /* NavigationConstants.swift */,
 				E48BF86F2128B95100B6C514 /* ImageUtils.swift */,
+				A7A0FDDD2128E13E00E76759 /* NotificationCenterKeys.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -778,6 +784,7 @@
 				E48BF84E2128A95600B6C514 /* ShowProductViewController.swift in Sources */,
 				E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */,
 				E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */,
+				A7A0FDDC2128E0D700E76759 /* NotificationName.swift in Sources */,
 				E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */,
 				E48BF8722128BB8200B6C514 /* Product.swift in Sources */,
 				E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */,
@@ -794,6 +801,7 @@
 				E48BF8642128A9C900B6C514 /* Serivce.swift in Sources */,
 				E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */,
 				E48BF8622128A9C200B6C514 /* Parser.swift in Sources */,
+				A7A0FDDE2128E13E00E76759 /* NotificationCenterKeys.swift in Sources */,
 				E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */,
 				E48BF87C2128C64100B6C514 /* ProductsViewController.swift in Sources */,
 			);

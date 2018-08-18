@@ -13,31 +13,33 @@ class Product {
     let id: String
     let name: String
     let expirationDate: Date
-    let photoUrl: String?
-    var photo: UIImage?
+    let imageUrl: String?
+    var image: UIImage?
     
     // MARK: - Initializers
-    init(id: String, name: String, expirationDate: Date, photoUrl: String?) {
+    init(id: String, name: String, expirationDate: Date, imageUrl: String?) {
         self.id = id
         self.name = name
         self.expirationDate = expirationDate
-        self.photoUrl = photoUrl
-        self.photo = nil
+        self.imageUrl = imageUrl
+        self.image = nil
+        
+        self.getProductImage()
     }
     
-    func getProductImage(completion: @escaping((_ image :UIImage?)->())) {
-        guard let urlString = self.photoUrl, let photoUrl = URL(string: urlString) else {
-            completion(nil)
+    func getProductImage() {
+        guard let urlString = self.imageUrl, let imageUrl = URL(string: urlString) else {
             return
         }
         
-        let request = URLRequest(url: photoUrl)
+        let request = URLRequest(url: imageUrl)
         let photoDownloadTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 if let _ = error {
-                    completion(nil)
+                    NotificationCenter.default.post(name: .ProductImageDownloadFailed, object: nil, userInfo: [NotificationCenterKeys.ProductId : self.id])
                 } else if let imageData = data, let image = UIImage(data: imageData) {
-                    completion(image)
+                    self.image = image
+                    NotificationCenter.default.post(name: .ProductImageDownloaded, object: nil, userInfo: [NotificationCenterKeys.ProductId : self.id])
                 }
             }
         }

@@ -22,11 +22,12 @@ class Meal {
         self.name = name
         self.imageUrl = imageUrl
         self.image = nil
+        
+        self.getMealImage()
     }
     
-    func getMealImage(completion: @escaping((_ image :UIImage?)->())) {
+    func getMealImage() {
         guard let urlString = self.imageUrl, let photoUrl = URL(string: urlString) else {
-            completion(nil)
             return
         }
         
@@ -34,9 +35,10 @@ class Meal {
         let photoDownloadTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 if let _ = error {
-                    completion(nil)
+                    NotificationCenter.default.post(name: .MealImageDownloadFailed, object: nil, userInfo: [NotificationCenterKeys.MealId : self.id])
                 } else if let imageData = data, let image = UIImage(data: imageData) {
-                    completion(image)
+                    self.image = image
+                    NotificationCenter.default.post(name: .MealImageDownloaded, object: nil, userInfo: [NotificationCenterKeys.MealId : self.id])
                 }
             }
         }
