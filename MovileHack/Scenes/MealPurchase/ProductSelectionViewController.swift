@@ -36,6 +36,8 @@ class ProductSelectionViewController: BaseViewController {
             self.productsTableView.delegate = self
             self.productsTableView.dataSource = self
             
+            self.productsTableView.separatorStyle = .none
+            
             self.productsTableView.register(ProductSelectionTableViewCell.self, forCellReuseIdentifier: String(describing: ProductSelectionTableViewCell.self))
             self.productsTableView.register(UINib(nibName: String(describing: ProductSelectionTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ProductSelectionTableViewCell.self))
         }

@@ -33,27 +33,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-zk-YVZ">
-                                <rect key="frame" x="16" y="549.5" width="38.5" height="19.5"/>
+                                <rect key="frame" x="16" y="559.5" width="38.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-Cy-k3Z">
-                                <rect key="frame" x="62.5" y="550" width="39.5" height="19.5"/>
+                                <rect key="frame" x="62.5" y="560" width="39.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-Ph-4Ya">
-                                <rect key="frame" x="265" y="545" width="94" height="29"/>
+                                <rect key="frame" x="265" y="555" width="94" height="29"/>
                                 <connections>
                                     <action selector="didTapStepperButton:" destination="SWg-Q4-UEy" eventType="valueChanged" id="Wj3-uQ-o5L"/>
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgI-1X-tVh" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
-                                <rect key="frame" x="16" y="601" width="343" height="50"/>
+                                <rect key="frame" x="40" y="595" width="295" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Lmi-iF-q1c"/>
+                                    <constraint firstAttribute="height" constant="48" id="Lmi-iF-q1c"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -65,8 +65,8 @@
                         <constraints>
                             <constraint firstItem="C9n-Rb-tdC" firstAttribute="top" secondItem="l11-4H-8V8" secondAttribute="bottom" constant="16" id="3HE-50-sdo"/>
                             <constraint firstItem="IjE-Ph-4Ya" firstAttribute="top" relation="greaterThanOrEqual" secondItem="C9n-Rb-tdC" secondAttribute="bottom" constant="16" id="9MT-aa-HHF"/>
-                            <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="mgI-1X-tVh" secondAttribute="trailing" constant="16" id="HTJ-kh-C0P"/>
-                            <constraint firstItem="Hn0-fV-3u6" firstAttribute="bottom" secondItem="mgI-1X-tVh" secondAttribute="bottom" constant="16" id="L5F-W7-2ep"/>
+                            <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="mgI-1X-tVh" secondAttribute="trailing" constant="40" id="HTJ-kh-C0P"/>
+                            <constraint firstItem="Hn0-fV-3u6" firstAttribute="bottom" secondItem="mgI-1X-tVh" secondAttribute="bottom" constant="24" id="L5F-W7-2ep"/>
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="IjE-Ph-4Ya" secondAttribute="trailing" constant="16" id="MuC-yP-7L5"/>
                             <constraint firstItem="IVS-Cy-k3Z" firstAttribute="centerY" secondItem="QGr-zk-YVZ" secondAttribute="centerY" id="QUg-A1-xJ6"/>
                             <constraint firstItem="C9n-Rb-tdC" firstAttribute="leading" secondItem="Hn0-fV-3u6" secondAttribute="leading" constant="16" id="SPd-H2-cjJ"/>
@@ -77,9 +77,9 @@
                             <constraint firstItem="IjE-Ph-4Ya" firstAttribute="top" secondItem="C9n-Rb-tdC" secondAttribute="bottom" priority="250" constant="16" id="fbk-NV-yd8"/>
                             <constraint firstItem="Hn0-fV-3u6" firstAttribute="trailing" secondItem="C9n-Rb-tdC" secondAttribute="trailing" constant="16" id="hrK-2A-dR2"/>
                             <constraint firstItem="QGr-zk-YVZ" firstAttribute="leading" secondItem="Hn0-fV-3u6" secondAttribute="leading" constant="16" id="o0Q-N6-Owv"/>
-                            <constraint firstItem="mgI-1X-tVh" firstAttribute="leading" secondItem="Hn0-fV-3u6" secondAttribute="leading" constant="16" id="uMO-lp-aos"/>
+                            <constraint firstItem="mgI-1X-tVh" firstAttribute="leading" secondItem="Hn0-fV-3u6" secondAttribute="leading" constant="40" id="uMO-lp-aos"/>
                             <constraint firstItem="l11-4H-8V8" firstAttribute="top" secondItem="Hn0-fV-3u6" secondAttribute="top" constant="60" id="vn4-8F-Te9"/>
-                            <constraint firstItem="mgI-1X-tVh" firstAttribute="top" secondItem="QGr-zk-YVZ" secondAttribute="bottom" constant="32" id="wBd-VM-BZc"/>
+                            <constraint firstItem="mgI-1X-tVh" firstAttribute="top" secondItem="QGr-zk-YVZ" secondAttribute="bottom" constant="16" id="wBd-VM-BZc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hn0-fV-3u6"/>
                     </view>
