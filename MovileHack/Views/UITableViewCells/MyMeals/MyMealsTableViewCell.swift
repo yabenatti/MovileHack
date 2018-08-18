@@ -50,7 +50,11 @@ class MyMealsTableViewCell: UITableViewCell {
         
         self.mealNameLabel.text = meal.name
         
-        //FIXME: Add correct product names
-        self.productsLabel.text = "Banana, maça"
+        //Meal Products and Quantity
+        var mealProductsAndQuantityLabelString = ""
+        for product in meal.products {
+            mealProductsAndQuantityLabelString.append(product.name + " ")
+        }
+        self.productsLabel.text = mealProductsAndQuantityLabelString
     }
 }

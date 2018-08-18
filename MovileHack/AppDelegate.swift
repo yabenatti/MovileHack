@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyDL54xY2ygTraQyTRtDcyJXAEQiW5RWgyY")
+        
+        // Tabbar
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.tabbarRed
 
         return true
     }
