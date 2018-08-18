@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meal Quantity View Controller-->
         <scene sceneID="cYg-RS-jdP">
             <objects>
-                <viewController id="SWg-Q4-UEy" sceneMemberID="viewController">
+                <viewController id="SWg-Q4-UEy" customClass="MealQuantityViewController" customModule="MovileHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTj-4h-EDT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                                     <constraint firstAttribute="height" constant="42" id="Lmi-iF-q1c"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="SWg-Q4-UEy" eventType="touchUpInside" id="N7F-Wt-2he"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,6 +72,13 @@
                         <viewLayoutGuide key="safeArea" id="Hn0-fV-3u6"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jag-fN-4qE"/>
+                    <connections>
+                        <outlet property="mealDescriptionLabel" destination="C9n-Rb-tdC" id="O97-uP-vlI"/>
+                        <outlet property="mealImageView" destination="l11-4H-8V8" id="fZk-1n-Vs1"/>
+                        <outlet property="mealQuantityLabel" destination="QGr-zk-YVZ" id="Q5D-Fl-HjV"/>
+                        <outlet property="mealQuantityStepper" destination="IjE-Ph-4Ya" id="Vgy-iE-JZn"/>
+                        <outlet property="nextButton" destination="mgI-1X-tVh" id="Eym-cj-jOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knK-A8-ySi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
