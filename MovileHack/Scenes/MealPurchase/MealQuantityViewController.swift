@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealQuantityViewController: UIViewController {
+class MealQuantityViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var mealImageView: UIImageView! {
@@ -29,8 +29,12 @@ class MealQuantityViewController: UIViewController {
             mealQuantityLabel.text = "0"
         }
     }
-    @IBOutlet weak var mealQuantityStepper: UIStepper!
-    @IBOutlet weak var nextButton: UIButton! {
+    @IBOutlet weak var mealQuantityStepper: UIStepper! {
+        didSet {
+            self.mealQuantityStepper.tintColor = UIColor.movilePink
+        }
+    }
+    @IBOutlet weak var nextButton: CTAButton! {
         didSet {
             self.nextButton.setTitle("Próximo", for: .normal)
         }

@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyDL54xY2ygTraQyTRtDcyJXAEQiW5RWgyY")
         
         // Tabbar
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.tabbarRed
+        UITabBar.appearance().tintColor = UIColor.movilePink
+        UINavigationBar.appearance().tintColor = UIColor.movilePink
 
         return true
     }

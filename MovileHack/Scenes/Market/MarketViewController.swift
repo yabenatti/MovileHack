@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MarketViewController: UIViewController {
+class MarketViewController: BaseViewController {
     
     override func loadView() {
         // Create a GMSCameraPosition that tells the map to display the

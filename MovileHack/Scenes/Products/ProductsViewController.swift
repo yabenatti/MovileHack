@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

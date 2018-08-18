@@ -52,8 +52,19 @@ class MyMealsTableViewCell: UITableViewCell {
         
         //Meal Products and Quantity
         var mealProductsAndQuantityLabelString = ""
-        for product in meal.products {
-            mealProductsAndQuantityLabelString.append(product.name + " ")
+        for i in 0..<meal.products.count {
+            let product = meal.products[i]
+            if i == 0 {
+                if meal.products.count > 1 {
+                    mealProductsAndQuantityLabelString.append(product.name + ", ")
+                } else {
+                    mealProductsAndQuantityLabelString.append(product.name)
+                }
+            } else if i == meal.products.count - 1 {
+                mealProductsAndQuantityLabelString.append(product.name)
+            } else {
+                mealProductsAndQuantityLabelString.append(product.name + ", ")
+            }
         }
         self.productsLabel.text = mealProductsAndQuantityLabelString
     }

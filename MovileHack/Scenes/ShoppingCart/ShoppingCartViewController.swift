@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingCartViewController: UIViewController {
+class ShoppingCartViewController: BaseViewController {
     
     // MARK: - IBOutlets
     
@@ -22,6 +22,8 @@ class ShoppingCartViewController: UIViewController {
     }
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var payButton: UIButton!
+
+    // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

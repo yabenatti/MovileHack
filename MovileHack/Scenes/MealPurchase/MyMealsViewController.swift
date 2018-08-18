@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyMealsViewController: UIViewController {
+class MyMealsViewController: BaseViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var myMealsTableView: UITableView! {
         didSet {
@@ -33,8 +33,10 @@ class MyMealsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Meus Pratos"
+        
         let meal = Meal(id: "123123123", name: "Salada de Frutas", imageUrl: nil)
-        meal.products = [Product(id: "123812", name: "Banana", price: 5.99, expirationDate: Date(), photoUrl: nil), Product(id: "19028312", name: "Maça", price: 4.99, expirationDate: Date(), photoUrl: nil)]
+        meal.products = [Product(id: "123812", name: "Banana", expirationDate: Date(), photoUrl: nil), Product(id: "19028312", name: "Maça", expirationDate: Date(), photoUrl: nil), Product(id: "124721498217", name: "Goiaba", expirationDate: Date(), photoUrl: nil)]
         self.meals.append(meal)
     }
 }

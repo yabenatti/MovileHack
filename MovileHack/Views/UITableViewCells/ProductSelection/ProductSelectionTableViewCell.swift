@@ -26,6 +26,6 @@ class ProductSelectionTableViewCell: UITableViewCell {
     }
     
     func setup(text: String, isSelected: Bool) {
-        self.productInfoLabel.text = text
+        self.productInfoLabel.text = "\(text) \(isSelected)"
     }
 }

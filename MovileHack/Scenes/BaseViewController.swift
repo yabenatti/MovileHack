@@ -1,25 +1,24 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  MovileHack
 //
-//  Created by Yasmin Benatti on 2018-08-18.
+//  Created by Movile Hack on 18/08/2018.
 //  Copyright © 2018 Yasmin Benatti. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        //Navigation Bar Back Button
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductSelectionViewController: UIViewController {
+class ProductSelectionViewController: BaseViewController {
     //FIXME: Implement proper productOptions
     private class ProductOption {
         let id: String
@@ -43,6 +43,7 @@ class ProductSelectionViewController: UIViewController {
     @IBOutlet weak var addButton: CTAButton! {
         didSet {
             self.addButton.setTitle("Adicionar", for: .normal)
+            self.addButton.isEnabled = false
         }
     }
     
@@ -53,7 +54,15 @@ class ProductSelectionViewController: UIViewController {
             self.productsTableView.reloadData()
         }
     }
-    private var selectedProductOptions = [String : String]()
+    private var selectedProductOptions = [String : String]() {
+        didSet {
+            if self.selectedProductOptions.count == self.productSelectionSections.count {
+                self.addButton.isEnabled = true
+            } else {
+                self.addButton.isEnabled = false
+            }
+        }
+    }
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -91,7 +100,16 @@ extension ProductSelectionViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = self.productSelectionSections[indexPath.section].product
+        let option = self.productSelectionSections[indexPath.section].productOptions[indexPath.row]
         
+        //Find previously selected option for this product
+        if let _ = self.selectedProductOptions[product.id] {
+            self.selectedProductOptions[product.id] = option.id
+        } else {
+            self.selectedProductOptions[product.id] = option.id
+        }
+        self.productsTableView.reloadSections([indexPath.section], with: .none)
     }
 }
 
@@ -109,15 +127,20 @@ extension ProductSelectionViewController : UITableViewDataSource {
             return UITableViewCell()
         }
         let product = self.productSelectionSections[indexPath.section].product
-//        let  = self.productSelectionSections[indexPath.section].product
+        let option = self.productSelectionSections[indexPath.section].productOptions[indexPath.row]
         
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
         currencyFormatter.locale = Locale.current
-        let price = currencyFormatter.string(from: NSNumber(floatLiteral: self.productSelectionSections[indexPath.section].productOptions[indexPath.row].price)) ?? ""
+        let price = currencyFormatter.string(from: NSNumber(floatLiteral: option.price)) ?? ""
         let isSelected: Bool
-//        if let selectedProductOption = self.selectedProductOptions[self.productSelectionSections[indexPath.section].product.id], selectedProductOption ==
-//        cell.setup(text: price)
+        //Check if Product option is selected
+        if let selectedProductOption = self.selectedProductOptions[product.id], selectedProductOption == option.id {
+            isSelected = true
+        } else {
+            isSelected = false
+        }
+        cell.setup(text: price, isSelected: isSelected)
         
         return cell
     }

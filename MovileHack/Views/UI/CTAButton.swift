@@ -22,6 +22,9 @@ class CTAButton: UIButton {
     }
     
     private func setupButton() {
-        //FIXME: Setup button style
+        self.backgroundColor = UIColor.movilePink
+        self.layer.cornerRadius = 6.0
+        self.tintColor = UIColor.white
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     }
 }
