@@ -14,7 +14,7 @@
         <!--Meal Quantity View Controller-->
         <scene sceneID="cYg-RS-jdP">
             <objects>
-                <viewController id="SWg-Q4-UEy" customClass="MealQuantityViewController" customModule="MovileHack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MealQuantityViewController" id="SWg-Q4-UEy" customClass="MealQuantityViewController" customModule="MovileHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTj-4h-EDT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,8 +73,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jag-fN-4qE"/>
                     <connections>
-                        <outlet property="mealDescriptionLabel" destination="C9n-Rb-tdC" id="O97-uP-vlI"/>
                         <outlet property="mealImageView" destination="l11-4H-8V8" id="fZk-1n-Vs1"/>
+                        <outlet property="mealProductsAndQuantityLabel" destination="C9n-Rb-tdC" id="Qt3-lG-iEr"/>
                         <outlet property="mealQuantityLabel" destination="QGr-zk-YVZ" id="Q5D-Fl-HjV"/>
                         <outlet property="mealQuantityStepper" destination="IjE-Ph-4Ya" id="Vgy-iE-JZn"/>
                         <outlet property="nextButton" destination="mgI-1X-tVh" id="Eym-cj-jOm"/>

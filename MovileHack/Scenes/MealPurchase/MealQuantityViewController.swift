@@ -12,7 +12,7 @@ class MealQuantityViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var mealImageView: UIImageView!
-    @IBOutlet weak var mealDescriptionLabel: UILabel!
+    @IBOutlet weak var mealProductsAndQuantityLabel: UILabel!
     @IBOutlet weak var mealQuantityLabel: UILabel! {
         didSet {
             mealQuantityLabel.text = "QTD:"
@@ -31,7 +31,7 @@ class MealQuantityViewController: UIViewController {
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let meal = self.meal {
             self.populateView(meal)
         }
@@ -44,16 +44,13 @@ class MealQuantityViewController: UIViewController {
     
     // MARK: - Layout
     func populateView(_ meal: Meal) {
+        //Photo
         if let photoUrl = meal.photoUrl {
             ImageUtils.downloadImage(urlString: photoUrl) { (image) in
                 if let image = image {
                     self.mealImageView.image = image
                 }
             }
-        }
-        
-        if let description = meal.mealDescription {
-            self.mealDescriptionLabel.text = description
         }
     }
     
