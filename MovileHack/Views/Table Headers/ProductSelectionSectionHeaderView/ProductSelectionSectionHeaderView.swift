@@ -15,9 +15,15 @@ class ProductSelectionSectionHeaderView: BaseView {
             self.productNameLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         }
     }
+    @IBOutlet weak var productQuantityLabel: UILabel! {
+        didSet {
+            self.productQuantityLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        }
+    }
     
     // MARK: - Methods
-    func setup(product: Product) {
-        self.productNameLabel.text = product.name
+    func setup(mealProduct: MealProduct) {
+        self.productNameLabel.text = mealProduct.product.name
+        self.productQuantityLabel.text = "\(mealProduct.quantity)\(mealProduct.unit.rawValue)"
     }
 }

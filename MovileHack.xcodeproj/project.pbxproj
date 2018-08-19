@@ -31,6 +31,8 @@
 		A7A0FDEA2129171E00E76759 /* FacadeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDE92129171E00E76759 /* FacadeService.swift */; };
 		A7A0FDEC2129173100E76759 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDEB2129173100E76759 /* MealService.swift */; };
 		A7A0FDEE2129175400E76759 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDED2129175400E76759 /* ProductService.swift */; };
+		A7A0FDF02129321900E76759 /* PurveyorProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDEF2129321900E76759 /* PurveyorProductService.swift */; };
+		A7A0FDF22129327D00E76759 /* PurveyorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF12129327D00E76759 /* PurveyorService.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
 		E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80921288A8200B6C514 /* Assets.xcassets */; };
@@ -126,6 +128,8 @@
 		A7A0FDE92129171E00E76759 /* FacadeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeService.swift; sourceTree = "<group>"; };
 		A7A0FDEB2129173100E76759 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		A7A0FDED2129175400E76759 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		A7A0FDEF2129321900E76759 /* PurveyorProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurveyorProductService.swift; sourceTree = "<group>"; };
+		A7A0FDF12129327D00E76759 /* PurveyorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurveyorService.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				A7A0FDEB2129173100E76759 /* MealService.swift */,
 				A7A0FDED2129175400E76759 /* ProductService.swift */,
 				E4AC53A6212932D4002059C5 /* RestaurantService.swift */,
+				A7A0FDF12129327D00E76759 /* PurveyorService.swift */,
+				A7A0FDEF2129321900E76759 /* PurveyorProductService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -921,6 +927,7 @@
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,
 				E4AC53A7212932D4002059C5 /* RestaurantService.swift in Sources */,
 				E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */,
+				A7A0FDF22129327D00E76759 /* PurveyorService.swift in Sources */,
 				A74423E92128BFA600FDF37D /* CTAButton.swift in Sources */,
 				A74423E52128B5A400FDF37D /* MyMealsTableViewCell.swift in Sources */,
 				E48BF8582128A99500B6C514 /* RegisterProductViewController.swift in Sources */,
@@ -934,6 +941,7 @@
 				E4AC53A921293724002059C5 /* CALayerExtension.swift in Sources */,
 				A7A0FDEC2129173100E76759 /* MealService.swift in Sources */,
 				A7A0FDDE2128E13E00E76759 /* NotificationCenterKeys.swift in Sources */,
+				A7A0FDF02129321900E76759 /* PurveyorProductService.swift in Sources */,
 				E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */,
 				E48BF87C2128C64100B6C514 /* ProductsViewController.swift in Sources */,
 			);

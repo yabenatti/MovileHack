@@ -66,10 +66,12 @@ class MyMealsViewController: BaseViewController {
 
         self.navigationItem.title = "Meus Pratos"
         
+        self.showLoadingView(isLarge: false)
         FacadeService.getAllUserMeals { (meals) in
             if let meals = meals {
                 self.meals = meals
             }
+            self.hideLoadingView()
         }
      
         self.hideSelectPricesButton()
@@ -99,15 +101,7 @@ class MyMealsViewController: BaseViewController {
     // MARK: - IBActions
     @IBAction func didTapSelectPricesButton(_ sender: Any) {
         if let productSelectionViewController = UIStoryboard(name: .ProductSelection).instantiateViewController(withIdentifier: ViewControllerName.ProductSelectionViewController) as? ProductSelectionViewController {
-            var products = [Product]()
-            for (meal, _) in self.selectedMeals {
-                for product in meal.products {
-//                    if !products.contains(product) {
-//                        products.append(product)
-//                    }
-                }
-            }
-            productSelectionViewController.products = products
+            productSelectionViewController.getProductsFrom(meals: self.selectedMeals)
             self.navigationController?.pushViewController(productSelectionViewController, animated: true)
         }
     }
@@ -159,12 +153,6 @@ extension MyMealsViewController : UITableViewDataSource {
 // MARK: - MealQuantityViewControllerDelegate
 extension MyMealsViewController : MealQuantityViewControllerDelegate {
     func selectedMealQuantity(meal: Meal, quantity: UInt) {
-//        var products = [Product : UInt]()
-//        for product in meal.products {
-//            products[product] = UInt(quantity)
-//        }
-//        Cart.getSharedInstance().addProducts(products)
-
         if let mealQuantity = self.selectedMeals[meal] {
             self.selectedMeals[meal] = quantity + mealQuantity
         } else {

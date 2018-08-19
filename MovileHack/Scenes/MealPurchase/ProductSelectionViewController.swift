@@ -23,12 +23,12 @@ class ProductOption {
 }
 
 class ProductSelectionSection {
-    let product: Product
-    var productOptions: [ProductOption]
+    let mealProduct: MealProduct
+    var purveyorProducts: [PurveyorProduct]
     
-    init(product: Product, productOptions: [ProductOption]) {
-        self.product = product
-        self.productOptions = productOptions
+    init(product: MealProduct, purveyorProducts: [PurveyorProduct]) {
+        self.mealProduct = product
+        self.purveyorProducts = purveyorProducts
     }
 }
 
@@ -55,13 +55,13 @@ class ProductSelectionViewController: BaseViewController {
     }
     
     // MARK: - Variables
-    var products = [Product]()
+    var products = [MealProduct]()
     private var productSelectionSections = [ProductSelectionSection]() {
         didSet {
             self.productsTableView.reloadData()
         }
     }
-    private var selectedProductOptions = [Product : String]() {
+    private var selectedProductOptions = [Product : PurveyorProduct]() {
         didSet {
             if self.selectedProductOptions.count == self.productSelectionSections.count {
                 self.addButton.isEnabled = true
@@ -77,18 +77,27 @@ class ProductSelectionViewController: BaseViewController {
         
         self.navigationItem.title = "Produtos e Fornecedores"
 
-        for product in products {
-            let productOptions = [ProductOption(id: "\(arc4random())", purveyorName: "ACME", deliveryTime: 5.0, price: 10.0),
-                                  ProductOption(id: "\(arc4random())", purveyorName: "Rocket", deliveryTime: 2.5, price: 15.0),
-                                  ProductOption(id: "\(arc4random())", purveyorName: "Caffeine", deliveryTime: 7.0, price: 7.50)]
-            self.productSelectionSections.append(ProductSelectionSection(product: product, productOptions: productOptions))
+        var productSelectionSections = [ProductSelectionSection]()
+        let dispatchGroup = DispatchGroup()
+        for mealProduct in self.products {
+            dispatchGroup.enter()
+            FacadeService.getTopPurveyorProducts(mealProduct: mealProduct) { (purveyorProducts) in
+                if let purveyorProducts = purveyorProducts {
+                    productSelectionSections.append(ProductSelectionSection(product: mealProduct, purveyorProducts: purveyorProducts))
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        self.showLoadingView(isLarge: false)
+        dispatchGroup.notify(queue: .main) {
+            self.productSelectionSections = productSelectionSections
+            self.hideLoadingView()
         }
     }
     
     // MARK: - IBActions
     @IBAction func didTapAddButton(_ sender: Any) {
-        
-        
         let alertViewController = UIAlertController(title: "Parabéns", message: "Produtos adicionados ao carrinho", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
@@ -99,12 +108,29 @@ class ProductSelectionViewController: BaseViewController {
         
         self.present(alertViewController, animated: true, completion: nil)
     }
+    
+    // MARK: - Methods
+    func getProductsFrom(meals: [Meal : UInt]) {
+        var mealProducts = [MealProduct]()
+        //Get all products with quantities to group duplicates
+        for (meal, quantity) in meals {
+            for mealProduct in meal.products {
+                if let index = mealProducts.index(where: { (mProduct) -> Bool in return mProduct.product == mealProduct.product }) {
+                    let mProduct = mealProducts[index]
+                    mealProducts[index] = MealProduct(product: mProduct.product, quantity: mProduct.quantity + mealProduct.quantity * Double(quantity), unit: mealProduct.unit)
+                } else {
+                    mealProducts.append(MealProduct(product: mealProduct.product, quantity: mealProduct.quantity * Double(quantity), unit: mealProduct.unit))
+                }
+            }
+        }
+        self.products = mealProducts
+    }
 }
 
 extension ProductSelectionViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ProductSelectionSectionHeaderView()
-        header.setup(product: self.productSelectionSections[section].product)
+        header.setup(mealProduct: self.productSelectionSections[section].mealProduct)
         
         return header
     }
@@ -114,23 +140,23 @@ extension ProductSelectionViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let product = self.productSelectionSections[indexPath.section].product
-        let option = self.productSelectionSections[indexPath.section].productOptions[indexPath.row]
+        let product = self.productSelectionSections[indexPath.section].mealProduct.product
+        let purveyorProduct = self.productSelectionSections[indexPath.section].purveyorProducts[indexPath.row]
         
         var previousSelectedRow: Int? = nil
         
         //Find previously selected option for this product and reload it if needed
-        if let optionId = self.selectedProductOptions[product] {
-            if optionId == option.id {
+        if let auxPurveyorProduct = self.selectedProductOptions[product] {
+            if purveyorProduct == auxPurveyorProduct {
                 self.selectedProductOptions.removeValue(forKey: product)
             } else {
-                self.selectedProductOptions[product] = option.id
-                if let index = self.productSelectionSections[indexPath.section].productOptions.index(where: { (productOption) -> Bool in return productOption.id == optionId }) {
+                self.selectedProductOptions[product] = purveyorProduct
+                if let index = self.productSelectionSections[indexPath.section].purveyorProducts.index(of: auxPurveyorProduct) {
                     previousSelectedRow = index
                 }
             }
         } else {
-            self.selectedProductOptions[product] = option.id
+            self.selectedProductOptions[product] = purveyorProduct
         }
         var indexPaths = [indexPath]
         if let previousSelectedRow = previousSelectedRow {
@@ -146,19 +172,19 @@ extension ProductSelectionViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.productSelectionSections[section].productOptions.count
+        return self.productSelectionSections[section].purveyorProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductSelectionTableViewCell.self), for: indexPath) as? ProductSelectionTableViewCell else {
             return UITableViewCell()
         }
-        let product = self.productSelectionSections[indexPath.section].product
-        let option = self.productSelectionSections[indexPath.section].productOptions[indexPath.row]
+        let product = self.productSelectionSections[indexPath.section].mealProduct.product
+        let purveyorProduct = self.productSelectionSections[indexPath.section].purveyorProducts[indexPath.row]
 
         let isSelected: Bool
         //Check if Product option is selected
-        if let selectedProductOption = self.selectedProductOptions[product], selectedProductOption == option.id {
+        if let selectedPurveyorProduct = self.selectedProductOptions[product], selectedPurveyorProduct == purveyorProduct {
             isSelected = true
         } else {
             isSelected = false
@@ -171,7 +197,7 @@ extension ProductSelectionViewController : UITableViewDataSource {
         } else {
             optionType = .Cheapest
         }
-        cell.setup(type: optionType, productOption: option, isSelected: isSelected)
+        cell.setup(type: optionType, purveyorProduct: purveyorProduct, isSelected: isSelected)
         
         return cell
     }

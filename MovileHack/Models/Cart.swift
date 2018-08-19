@@ -37,14 +37,14 @@ final class Cart {
         NotificationCenter.default.post(name: .CartCleared, object: nil)
     }
     
-    func addProducts(_ products: [Product : UInt]) {
-        for (product, quantity) in products {
-            if let productQuantity = self.products[product.id] {
-                self.products[product.id] = productQuantity + quantity
-            } else {
-                self.products[product.id] = quantity
-            }
-        }
-        TabBarUtils.setCartTabbarNumber(self.products.count)
-    }
+//    func addProducts(_ products: [MarketableProduct]) {
+//        for marketableProduct in products {
+//            if let productQuantity = self.products[marketableProduct.product.id] {
+//                self.products[product.id] = productQuantity + quantity
+//            } else {
+//                self.products[product.id] = quantity
+//            }
+//        }
+//        TabBarUtils.setCartTabbarNumber(self.products.count)
+//    }
 }
