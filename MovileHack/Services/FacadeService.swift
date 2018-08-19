@@ -15,6 +15,10 @@ final class FacadeService {
     }
     
     // MARK: - Product Service
+    class func getAllProducts(completion: @escaping ([Product]?) -> ()) {
+        ProductService.getAllProducts(completion: completion)
+    }
+    
     class func getProductsFor(mealId: String, completion: @escaping ([Product]?) -> ()) {
         ProductService.getProductsFor(mealId: mealId, completion: completion)
     }

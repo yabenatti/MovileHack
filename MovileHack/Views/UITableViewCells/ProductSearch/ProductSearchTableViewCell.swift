@@ -39,8 +39,12 @@ class ProductSearchTableViewCell: UITableViewCell {
     }
     
     func populateWithProduct(_ product: Product) {
-        self.productNameLabel.text = product.name
+        if let productImage = product.image {
+            self.productImageView.image = productImage
+        } else {
+            self.productImageView.image = UIImage(named: "meal_default")
+        }
         
-        // FIXME: - Price
+        self.productNameLabel.text = product.name
     }
 }

@@ -43,27 +43,31 @@ class ProductsViewController: BaseViewController {
         self.searchController.searchBar.barTintColor = UIColor.white
         self.searchController.searchBar.delegate = self
         self.tableView.tableHeaderView = self.searchController.searchBar
-
-        self.products = [Product(id: "123812", name: "Banana", expirationDate: Date(), imageUrl: "http://static1.conquistesuavida.com.br/ingredients/5/54/26/75/@/24677--ingredient_detail_ingredient-2.png"),
-                         Product(id: "19028312", name: "Maçã", expirationDate: Date(), imageUrl: "https://superprix.vteximg.com.br/arquivos/ids/175207-600-600/Maca-Argentina--1-unidade-aprox.-200g-.png?v=636294203590200000"),
-                         Product(id: "124721498217", name: "Goiaba", expirationDate: Date(), imageUrl: nil),
-                         Product(id: "123812", name: "Banana", expirationDate: Date(), imageUrl: "http://static1.conquistesuavida.com.br/ingredients/5/54/26/75/@/24677--ingredient_detail_ingredient-2.png"),
-                         Product(id: "19028312", name: "Maçã", expirationDate: Date(), imageUrl: "https://superprix.vteximg.com.br/arquivos/ids/175207-600-600/Maca-Argentina--1-unidade-aprox.-200g-.png?v=636294203590200000"),
-                         Product(id: "124721498217", name: "Goiaba", expirationDate: Date(), imageUrl: nil),
-                         Product(id: "123812", name: "Banana", expirationDate: Date(), imageUrl: "http://static1.conquistesuavida.com.br/ingredients/5/54/26/75/@/24677--ingredient_detail_ingredient-2.png"),
-                         Product(id: "19028312", name: "Maçã", expirationDate: Date(), imageUrl: "https://superprix.vteximg.com.br/arquivos/ids/175207-600-600/Maca-Argentina--1-unidade-aprox.-200g-.png?v=636294203590200000"),
-                         Product(id: "124721498217", name: "Goiaba", expirationDate: Date(), imageUrl: nil)]
-        self.filteredProducts = self.products
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(productImageDownloaded(notification:)), name: .ProductImageDownloaded, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.showLoadingView(isLarge: false)
+        FacadeService.getAllProducts { (products) in
+            if let products = products {
+                self.products = products
+                self.filteredProducts = self.products
+            }
+            self.tableView.reloadData()
+            self.hideLoadingView()
+        }
+    }
+    
+    // MARK: - Notifications
+    @objc func productImageDownloaded(notification: Notification) {
+        guard let userInfo = notification.userInfo as? [String : Any], let productId = userInfo[NotificationCenterKeys.ProductId] as? String, let index = self.filteredProducts.index(where: { (product) -> Bool in return product.id == productId }) else {
+            return
+        }
+        
+        self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
     }
 }
 
