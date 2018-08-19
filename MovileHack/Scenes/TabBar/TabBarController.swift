@@ -14,6 +14,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         CALayer.setDropShadow(layer: self.tabBar.layer, radius: 6, opacity: 0.3)
+        self.selectedIndex = 2
     }
 
     override func didReceiveMemoryWarning() {

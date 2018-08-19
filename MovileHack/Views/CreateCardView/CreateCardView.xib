@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="355" height="240"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_creation" translatesAutoresizingMaskIntoConstraints="NO" id="tdr-pi-jjQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tdr-pi-jjQ">
                     <rect key="frame" x="0.0" y="0.0" width="355" height="240"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Prato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-cL-MLc">
@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua única preocupação é colocar quais ingredientes que tem no seu prato, que a parte chata a gente cuida." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clr-Cn-mcf">
-                    <rect key="frame" x="16" y="50.5" width="323" height="105.5"/>
+                    <rect key="frame" x="16" y="74" width="323" height="92"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -51,11 +51,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="clr-Cn-mcf" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="2BC-cV-Rdp"/>
                 <constraint firstItem="tdr-pi-jjQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3KD-GV-vDJ"/>
                 <constraint firstItem="7R5-cL-MLc" firstAttribute="centerX" secondItem="tdr-pi-jjQ" secondAttribute="centerX" id="5Ih-za-ajz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tdr-pi-jjQ" secondAttribute="bottom" id="Wf1-j6-R9k"/>
                 <constraint firstItem="UJY-vR-6mu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="clr-Cn-mcf" secondAttribute="bottom" constant="8" id="YdL-cP-cqY"/>
-                <constraint firstItem="clr-Cn-mcf" firstAttribute="top" secondItem="7R5-cL-MLc" secondAttribute="bottom" constant="8" id="ZXe-8Z-3na"/>
+                <constraint firstItem="clr-Cn-mcf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7R5-cL-MLc" secondAttribute="bottom" constant="8" id="ZXe-8Z-3na"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="clr-Cn-mcf" secondAttribute="trailing" constant="16" id="c7j-ul-159"/>
                 <constraint firstItem="UJY-vR-6mu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="c98-f8-P7p"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7R5-cL-MLc" secondAttribute="trailing" constant="16" id="duJ-mb-qDz"/>
@@ -72,7 +73,4 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
-    <resources>
-        <image name="meal_creation" width="343" height="512"/>
-    </resources>
 </document>
