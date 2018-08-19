@@ -28,16 +28,16 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxk-ts-tXU">
-                        <rect key="frame" x="80" y="16.5" width="224" height="48"/>
+                        <rect key="frame" x="80" y="16.5" width="204" height="48"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxi-vH-ehf">
-                                <rect key="frame" x="0.0" y="0.0" width="224" height="23.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="23.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-hb-Ci7">
-                                <rect key="frame" x="0.0" y="27" width="224" height="21"/>
+                                <rect key="frame" x="0.0" y="27" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,16 +54,25 @@
                             <constraint firstAttribute="bottom" secondItem="5gB-hb-Ci7" secondAttribute="bottom" id="w4o-2Y-xZs"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron_right" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-qJ-eUL">
+                        <rect key="frame" x="292" y="34.5" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aWT-qJ-eUL" secondAttribute="height" multiplier="1:1" id="ddA-6C-nCI"/>
+                            <constraint firstAttribute="width" constant="12" id="i3q-L7-IMA"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wxk-ts-tXU" firstAttribute="leading" secondItem="vsg-sb-KEF" secondAttribute="trailing" constant="16" id="33Y-Bc-Wn4"/>
-                    <constraint firstItem="vsg-sb-KEF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="K6e-CQ-5d3"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vsg-sb-KEF" secondAttribute="bottom" constant="16" id="Rry-g0-L1q"/>
-                    <constraint firstAttribute="trailing" secondItem="wxk-ts-tXU" secondAttribute="trailing" constant="16" id="T9G-6j-to0"/>
+                    <constraint firstItem="vsg-sb-KEF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="K6e-CQ-5d3"/>
+                    <constraint firstAttribute="bottom" secondItem="vsg-sb-KEF" secondAttribute="bottom" constant="16" id="Rry-g0-L1q"/>
                     <constraint firstItem="wxk-ts-tXU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="aZI-gs-lwg"/>
                     <constraint firstAttribute="bottom" secondItem="wxk-ts-tXU" secondAttribute="bottom" constant="16" id="ae5-cG-rKH"/>
+                    <constraint firstAttribute="trailing" secondItem="aWT-qJ-eUL" secondAttribute="trailing" constant="16" id="dq4-8X-713"/>
                     <constraint firstItem="wxk-ts-tXU" firstAttribute="centerY" secondItem="vsg-sb-KEF" secondAttribute="centerY" id="iGe-G0-dhS"/>
+                    <constraint firstItem="aWT-qJ-eUL" firstAttribute="centerY" secondItem="wxk-ts-tXU" secondAttribute="centerY" id="nTi-IA-HUO"/>
                     <constraint firstItem="vsg-sb-KEF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tkA-OM-GGv"/>
+                    <constraint firstItem="aWT-qJ-eUL" firstAttribute="leading" secondItem="wxk-ts-tXU" secondAttribute="trailing" constant="8" id="tnG-ab-fm3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -75,4 +84,7 @@
             <point key="canvasLocation" x="34" y="71.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chevron_right" width="8" height="13"/>
+    </resources>
 </document>
