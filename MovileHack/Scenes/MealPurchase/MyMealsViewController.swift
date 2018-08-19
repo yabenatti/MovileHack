@@ -102,6 +102,7 @@ class MyMealsViewController: BaseViewController {
     @IBAction func didTapSelectPricesButton(_ sender: Any) {
         if let productSelectionViewController = UIStoryboard(name: .ProductSelection).instantiateViewController(withIdentifier: ViewControllerName.ProductSelectionViewController) as? ProductSelectionViewController {
             productSelectionViewController.getProductsFrom(meals: self.selectedMeals)
+            productSelectionViewController.delegate = self
             self.navigationController?.pushViewController(productSelectionViewController, animated: true)
         }
     }
@@ -165,3 +166,9 @@ extension MyMealsViewController : MealQuantityViewControllerDelegate {
     }
 }
 
+extension MyMealsViewController : ProductSelectionViewControllerDelegate {
+    func didAddProducts() {
+        self.selectedMeals.removeAll()
+        self.hideSelectPricesButton()
+    }
+}

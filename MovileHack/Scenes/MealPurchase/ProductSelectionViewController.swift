@@ -32,6 +32,10 @@ class ProductSelectionSection {
     }
 }
 
+protocol ProductSelectionViewControllerDelegate: class {
+    func didAddProducts()
+}
+
 class ProductSelectionViewController: BaseViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var productsTableView: UITableView! {
@@ -55,6 +59,8 @@ class ProductSelectionViewController: BaseViewController {
     }
     
     // MARK: - Variables
+    weak var delegate: ProductSelectionViewControllerDelegate?
+    
     var products = [MealProduct]()
     private var productSelectionSections = [ProductSelectionSection]() {
         didSet {
@@ -98,6 +104,8 @@ class ProductSelectionViewController: BaseViewController {
     
     // MARK: - IBActions
     @IBAction func didTapAddButton(_ sender: Any) {
+        Cart.getSharedInstance().addProducts(Array(self.selectedProductOptions.values))
+        
         let alertViewController = UIAlertController(title: "Parabéns", message: "Produtos adicionados ao carrinho", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
@@ -107,6 +115,8 @@ class ProductSelectionViewController: BaseViewController {
         alertViewController.addAction(okAction)
         
         self.present(alertViewController, animated: true, completion: nil)
+        
+        self.delegate?.didAddProducts()
     }
     
     // MARK: - Methods

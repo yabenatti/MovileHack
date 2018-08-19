@@ -13,7 +13,7 @@ final class Cart {
     static private var sharedInstance: Cart?
     
     // MARK: - Variables
-    private var products = [String : UInt]()
+    private(set) var purveyorProducts = [PurveyorProduct]()
     
     // MARK: - Singleton Methods
     static func getSharedInstance() -> Cart {
@@ -29,22 +29,35 @@ final class Cart {
     private init() {}
     
     // MARK: - Methods
+    private func getNumberOfProducts() -> Int {
+        var productDict = [Product : Bool]()
+        for purveyorProduct in self.purveyorProducts {
+            if productDict[purveyorProduct.product] == nil {
+                productDict[purveyorProduct.product] = true
+            }
+        }
+        return productDict.count
+    }
+    
     func clear() {
-        self.products = [:]
+        self.purveyorProducts = []
 
-        TabBarUtils.setCartTabbarNumber(self.products.count)
+        TabBarUtils.setCartTabbarNumber(self.getNumberOfProducts())
         
         NotificationCenter.default.post(name: .CartCleared, object: nil)
     }
     
-//    func addProducts(_ products: [MarketableProduct]) {
-//        for marketableProduct in products {
-//            if let productQuantity = self.products[marketableProduct.product.id] {
-//                self.products[product.id] = productQuantity + quantity
-//            } else {
-//                self.products[product.id] = quantity
-//            }
-//        }
-//        TabBarUtils.setCartTabbarNumber(self.products.count)
-//    }
+    func addProducts(_ products: [PurveyorProduct]) {
+        for purveyorProduct in products {
+            let product = purveyorProduct.product
+            if let index = self.purveyorProducts.index(where: { (purveyorProduct) -> Bool in return purveyorProduct.product == product }) {
+                let pProuct = self.purveyorProducts[index]
+                self.purveyorProducts[index] = PurveyorProduct(id: pProuct.id, product: pProuct.product, purveyor: pProuct.purveyor, quantity: pProuct.quantity + purveyorProduct.quantity, unit: pProuct.unit, price: pProuct.price + purveyorProduct.price, deliveryTime: pProuct.deliveryTime)
+            } else {
+                self.purveyorProducts.append(purveyorProduct)
+            }
+        }
+        
+        TabBarUtils.setCartTabbarNumber(self.getNumberOfProducts())
+    }
 }
