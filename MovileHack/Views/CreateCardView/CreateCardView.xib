@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateCardView" customModule="MovileHack" customModuleProvider="target">
+            <connections>
+                <outlet property="createCardButton" destination="UJY-vR-6mu" id="BjT-gE-LZU"/>
+                <outlet property="createCardImageView" destination="tdr-pi-jjQ" id="ZTa-hl-Y5u"/>
+                <outlet property="createCardInfoLabel" destination="clr-Cn-mcf" id="msu-Hp-rdh"/>
+                <outlet property="createCardTitleLabel" destination="7R5-cL-MLc" id="nhd-U4-Ga1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_creation" translatesAutoresizingMaskIntoConstraints="NO" id="tdr-pi-jjQ">
+                    <rect key="frame" x="0.0" y="0.0" width="355" height="240"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Prato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-cL-MLc">
+                    <rect key="frame" x="16" y="16" width="323" height="26.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua única preocupação é colocar quais ingredientes que tem no seu prato, que a parte chata a gente cuida." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clr-Cn-mcf">
+                    <rect key="frame" x="16" y="50.5" width="323" height="105.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJY-vR-6mu" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
+                    <rect key="frame" x="40" y="174" width="275" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ted-st-jQP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapCreateCardButton:" destination="-1" eventType="touchUpInside" id="K0u-5v-cMj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tdr-pi-jjQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3KD-GV-vDJ"/>
+                <constraint firstItem="7R5-cL-MLc" firstAttribute="centerX" secondItem="tdr-pi-jjQ" secondAttribute="centerX" id="5Ih-za-ajz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tdr-pi-jjQ" secondAttribute="bottom" id="Wf1-j6-R9k"/>
+                <constraint firstItem="UJY-vR-6mu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="clr-Cn-mcf" secondAttribute="bottom" constant="8" id="YdL-cP-cqY"/>
+                <constraint firstItem="clr-Cn-mcf" firstAttribute="top" secondItem="7R5-cL-MLc" secondAttribute="bottom" constant="8" id="ZXe-8Z-3na"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="clr-Cn-mcf" secondAttribute="trailing" constant="16" id="c7j-ul-159"/>
+                <constraint firstItem="UJY-vR-6mu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="c98-f8-P7p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7R5-cL-MLc" secondAttribute="trailing" constant="16" id="duJ-mb-qDz"/>
+                <constraint firstItem="tdr-pi-jjQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g4D-w7-Dpe"/>
+                <constraint firstItem="clr-Cn-mcf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ioP-x6-55y"/>
+                <constraint firstItem="7R5-cL-MLc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="kqc-Yx-TdB"/>
+                <constraint firstItem="7R5-cL-MLc" firstAttribute="top" secondItem="tdr-pi-jjQ" secondAttribute="top" constant="16" id="sae-pT-gi2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UJY-vR-6mu" secondAttribute="trailing" constant="40" id="tNY-28-36w"/>
+                <constraint firstItem="tdr-pi-jjQ" firstAttribute="bottom" secondItem="UJY-vR-6mu" secondAttribute="bottom" constant="16" id="teE-ar-B8j"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tdr-pi-jjQ" secondAttribute="trailing" id="ueZ-4M-rN5"/>
+                <constraint firstItem="UJY-vR-6mu" firstAttribute="top" secondItem="clr-Cn-mcf" secondAttribute="bottom" priority="250" constant="8" id="zNA-ss-30g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="meal_creation" width="343" height="512"/>
+    </resources>
+</document>

@@ -18,56 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_creation" translatesAutoresizingMaskIntoConstraints="NO" id="2gR-Xr-yiA">
-                                <rect key="frame" x="16" y="16" width="343" height="522"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Prato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8U-o8-EEb">
-                                <rect key="frame" x="16" y="56" width="343" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua única preocupação é colocar quais ingredientes que tem no seu prato, que a parte chata a gente cuida." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPs-Wo-LJL">
-                                <rect key="frame" x="32" y="162" width="311" height="105.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQu-vI-Nkk" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="456" width="295" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EB1-ro-DDM">
+                                <rect key="frame" x="16" y="42" width="343" height="496"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Jy-01k" customClass="CreateCardView" customModule="MovileHack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="Q6s-gl-IQ6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHh-xM-7Mz" customClass="CreateCardView" customModule="MovileHack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="256" width="343" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fuz-dg-FwL"/>
+                                    <constraint firstItem="hWK-Jy-01k" firstAttribute="top" secondItem="EB1-ro-DDM" secondAttribute="top" id="4aX-oF-P4D"/>
+                                    <constraint firstItem="XHh-xM-7Mz" firstAttribute="leading" secondItem="EB1-ro-DDM" secondAttribute="leading" id="6n7-n5-iyM"/>
+                                    <constraint firstAttribute="bottom" secondItem="XHh-xM-7Mz" secondAttribute="bottom" id="727-rW-31o"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWK-Jy-01k" secondAttribute="trailing" id="Obv-xe-gDr"/>
+                                    <constraint firstItem="hWK-Jy-01k" firstAttribute="leading" secondItem="EB1-ro-DDM" secondAttribute="leading" id="bjI-cP-QsG"/>
+                                    <constraint firstAttribute="trailing" secondItem="XHh-xM-7Mz" secondAttribute="trailing" id="vn5-s4-RJx"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jeg-5V-TRC" firstAttribute="bottom" secondItem="2gR-Xr-yiA" secondAttribute="bottom" constant="16" id="8JR-C9-kXf"/>
-                            <constraint firstItem="TPs-Wo-LJL" firstAttribute="leading" secondItem="jeg-5V-TRC" secondAttribute="leading" constant="32" id="DyE-4S-LKK"/>
-                            <constraint firstItem="2gR-Xr-yiA" firstAttribute="top" secondItem="jeg-5V-TRC" secondAttribute="top" constant="16" id="MiU-92-QqG"/>
-                            <constraint firstItem="jeg-5V-TRC" firstAttribute="trailing" secondItem="KQu-vI-Nkk" secondAttribute="trailing" constant="40" id="Nat-N6-Rjz"/>
-                            <constraint firstItem="TPs-Wo-LJL" firstAttribute="top" secondItem="P8U-o8-EEb" secondAttribute="bottom" constant="80" id="Ngk-3h-Q7t"/>
-                            <constraint firstItem="P8U-o8-EEb" firstAttribute="top" secondItem="2gR-Xr-yiA" secondAttribute="top" constant="40" id="PfA-0b-sBM"/>
-                            <constraint firstItem="2gR-Xr-yiA" firstAttribute="bottom" secondItem="KQu-vI-Nkk" secondAttribute="bottom" constant="32" id="QVT-eP-J19"/>
-                            <constraint firstItem="KQu-vI-Nkk" firstAttribute="top" secondItem="TPs-Wo-LJL" secondAttribute="bottom" priority="250" constant="24" id="VeC-f0-0BV"/>
-                            <constraint firstAttribute="trailing" secondItem="TPs-Wo-LJL" secondAttribute="trailing" constant="32" id="adb-9q-nyd"/>
-                            <constraint firstItem="jeg-5V-TRC" firstAttribute="trailing" secondItem="P8U-o8-EEb" secondAttribute="trailing" constant="16" id="cMw-fX-o0T"/>
-                            <constraint firstItem="P8U-o8-EEb" firstAttribute="centerX" secondItem="2gR-Xr-yiA" secondAttribute="centerX" id="n0s-q0-jtE"/>
-                            <constraint firstItem="2gR-Xr-yiA" firstAttribute="leading" secondItem="jeg-5V-TRC" secondAttribute="leading" constant="16" id="nhW-fq-6XA"/>
-                            <constraint firstItem="KQu-vI-Nkk" firstAttribute="leading" secondItem="jeg-5V-TRC" secondAttribute="leading" constant="40" id="nna-aE-3uQ"/>
-                            <constraint firstItem="KQu-vI-Nkk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TPs-Wo-LJL" secondAttribute="bottom" constant="24" id="sNR-BX-yLh"/>
-                            <constraint firstItem="P8U-o8-EEb" firstAttribute="leading" secondItem="jeg-5V-TRC" secondAttribute="leading" constant="16" id="th1-Xt-GJH"/>
-                            <constraint firstItem="jeg-5V-TRC" firstAttribute="trailing" secondItem="2gR-Xr-yiA" secondAttribute="trailing" constant="16" id="v3y-LS-7oN"/>
+                            <constraint firstItem="jeg-5V-TRC" firstAttribute="trailing" secondItem="EB1-ro-DDM" secondAttribute="trailing" constant="16" id="EMo-e6-QO0"/>
+                            <constraint firstItem="EB1-ro-DDM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jeg-5V-TRC" secondAttribute="top" constant="16" id="k1w-JF-cfM"/>
+                            <constraint firstItem="EB1-ro-DDM" firstAttribute="leading" secondItem="jeg-5V-TRC" secondAttribute="leading" constant="16" id="tRG-cD-RFD"/>
+                            <constraint firstItem="jeg-5V-TRC" firstAttribute="bottom" secondItem="EB1-ro-DDM" secondAttribute="bottom" constant="16" id="uSt-qH-zJd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jeg-5V-TRC"/>
                     </view>
                     <navigationItem key="navigationItem" id="NAz-3D-vuo"/>
                     <connections>
-                        <outlet property="createMealButton" destination="KQu-vI-Nkk" id="Orl-1i-BK9"/>
-                        <outlet property="createMealDescriptionLabel" destination="TPs-Wo-LJL" id="GMO-fV-Dqb"/>
-                        <outlet property="createMealImageView" destination="2gR-Xr-yiA" id="xWZ-DV-bas"/>
-                        <outlet property="createMealTitleLabel" destination="P8U-o8-EEb" id="tkU-6R-IX3"/>
+                        <outlet property="createMealView" destination="hWK-Jy-01k" id="J7y-VZ-JOq"/>
+                        <outlet property="createResaleView" destination="XHh-xM-7Mz" id="8U6-qs-mXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWv-h2-8ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="meal_creation" width="343" height="512"/>
         <image name="plus_icon" width="27" height="27"/>
     </resources>
 </document>

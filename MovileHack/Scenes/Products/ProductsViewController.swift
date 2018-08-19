@@ -16,7 +16,7 @@ class ProductsViewController: BaseViewController {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
-            
+            self.tableView.tableFooterView = UIView()
             self.tableView.register(ProductSearchTableViewCell.self, forCellReuseIdentifier: String(describing: ProductSearchTableViewCell.self))
             self.tableView.register(UINib(nibName: String(describing: ProductSearchTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ProductSearchTableViewCell.self))
         }
