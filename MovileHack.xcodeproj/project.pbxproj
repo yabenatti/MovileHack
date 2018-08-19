@@ -36,6 +36,7 @@
 		A7A0FDF521294D4000E76759 /* ShoppingCartTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF421294D4000E76759 /* ShoppingCartTableHeaderView.swift */; };
 		A7A0FDF721294D4900E76759 /* ShoppingCartTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDF621294D4900E76759 /* ShoppingCartTableHeaderView.xib */; };
 		A7A0FDF921294F8100E76759 /* PriceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF821294F8100E76759 /* PriceUtils.swift */; };
+		A7A0FDFB212956E300E76759 /* MealProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDFA212956E300E76759 /* MealProduct.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
 		E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80921288A8200B6C514 /* Assets.xcassets */; };
@@ -136,6 +137,7 @@
 		A7A0FDF421294D4000E76759 /* ShoppingCartTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableHeaderView.swift; sourceTree = "<group>"; };
 		A7A0FDF621294D4900E76759 /* ShoppingCartTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartTableHeaderView.xib; sourceTree = "<group>"; };
 		A7A0FDF821294F8100E76759 /* PriceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceUtils.swift; sourceTree = "<group>"; };
+		A7A0FDFA212956E300E76759 /* MealProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealProduct.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -379,11 +381,12 @@
 			isa = PBXGroup;
 			children = (
 				A74423DE2128B4AF00FDF37D /* Meal.swift */,
+				A7A0FDFA212956E300E76759 /* MealProduct.swift */,
 				E48BF8712128BB8200B6C514 /* Product.swift */,
-				A7A0FDDF2129058000E76759 /* Cart.swift */,
 				A7A0FDE3212915E300E76759 /* Purveyor.swift */,
 				A7A0FDE52129160500E76759 /* PurveyorProduct.swift */,
 				E4AC53A42129218A002059C5 /* Restaurant.swift */,
+				A7A0FDDF2129058000E76759 /* Cart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 				E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */,
 				A7A0FDE221290A0800E76759 /* TabBarUtils.swift in Sources */,
 				A7A0FDCF2128C5CC00E76759 /* ProductSelectionTableViewCell.swift in Sources */,
+				A7A0FDFB212956E300E76759 /* MealProduct.swift in Sources */,
 				A7A0FDD82128C8D000E76759 /* BaseView.swift in Sources */,
 				A74423DF2128B4AF00FDF37D /* Meal.swift in Sources */,
 				A7A0FDEE2129175400E76759 /* ProductService.swift in Sources */,

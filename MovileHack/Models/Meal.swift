@@ -8,18 +8,6 @@
 
 import UIKit
 
-final class MealProduct {
-    let product: Product
-    let quantity: Double
-    let unit: ProductUnit
-    
-    init(product: Product, quantity: Double, unit: ProductUnit) {
-        self.product = product
-        self.quantity = quantity
-        self.unit = unit
-    }
-}
-
 final class Meal : Hashable, Equatable {
     // MARK: - Properties
     let id: String
