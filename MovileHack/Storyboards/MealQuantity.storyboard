@@ -22,6 +22,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O41-Pc-fRz">
                                 <rect key="frame" x="32" y="52" width="311" height="583"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLF-B7-aIB">
+                                        <rect key="frame" x="271" y="16" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TLF-B7-aIB" secondAttribute="height" multiplier="1:1" id="Ehm-bi-0ek"/>
+                                            <constraint firstAttribute="height" constant="24" id="Yvx-ME-RJM"/>
+                                        </constraints>
+                                        <state key="normal" image="close_icon"/>
+                                        <connections>
+                                            <action selector="didTapOutsideView:" destination="SWg-Q4-UEy" eventType="touchUpInside" id="sm6-YB-gta"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l11-4H-8V8">
                                         <rect key="frame" x="115" y="20" width="80" height="80"/>
                                         <constraints>
@@ -118,6 +129,8 @@
                                     <constraint firstAttribute="bottom" secondItem="mgI-1X-tVh" secondAttribute="bottom" constant="16" id="lqj-ZQ-jhN"/>
                                     <constraint firstItem="dWQ-m1-Ean" firstAttribute="top" secondItem="QRN-uj-RW4" secondAttribute="bottom" constant="8" id="mke-aK-bpw"/>
                                     <constraint firstItem="l11-4H-8V8" firstAttribute="centerX" secondItem="O41-Pc-fRz" secondAttribute="centerX" id="oVz-eV-hTV"/>
+                                    <constraint firstItem="TLF-B7-aIB" firstAttribute="top" secondItem="O41-Pc-fRz" secondAttribute="top" constant="16" id="pdn-l2-AuF"/>
+                                    <constraint firstAttribute="trailing" secondItem="TLF-B7-aIB" secondAttribute="trailing" constant="16" id="rwM-oM-4Wa"/>
                                     <constraint firstItem="hnM-QD-1ff" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" constant="16" id="tKu-Yn-yG0"/>
                                     <constraint firstItem="hnM-QD-1ff" firstAttribute="top" secondItem="l11-4H-8V8" secondAttribute="bottom" constant="12" id="umt-iE-nGC"/>
                                     <constraint firstItem="mgI-1X-tVh" firstAttribute="top" secondItem="Q5D-Ok-me0" secondAttribute="bottom" constant="8" id="w62-6U-PQ1"/>
@@ -155,4 +168,7 @@
             <point key="canvasLocation" x="948" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close_icon" width="16" height="16"/>
+    </resources>
 </document>

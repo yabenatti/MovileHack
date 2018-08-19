@@ -68,6 +68,8 @@
 		E4AC53912128DD39002059C5 /* ShoppingCartProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4AC538F2128DD39002059C5 /* ShoppingCartProductTableViewCell.xib */; };
 		E4AC53972128F553002059C5 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53952128F553002059C5 /* IngredientsTableViewCell.swift */; };
 		E4AC53982128F553002059C5 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4AC53962128F553002059C5 /* IngredientsTableViewCell.xib */; };
+		E4AC539C21290424002059C5 /* ProductSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC539A21290424002059C5 /* ProductSearchTableViewCell.swift */; };
+		E4AC539D21290424002059C5 /* ProductSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4AC539B21290424002059C5 /* ProductSearchTableViewCell.xib */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +153,8 @@
 		E4AC538F2128DD39002059C5 /* ShoppingCartProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartProductTableViewCell.xib; sourceTree = "<group>"; };
 		E4AC53952128F553002059C5 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		E4AC53962128F553002059C5 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		E4AC539A21290424002059C5 /* ProductSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchTableViewCell.swift; sourceTree = "<group>"; };
+		E4AC539B21290424002059C5 /* ProductSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSearchTableViewCell.xib; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -206,6 +210,7 @@
 		A74423E12128B58800FDF37D /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				E4AC539921290413002059C5 /* ProductSearch */,
 				E4AC53922128F478002059C5 /* Ingredients */,
 				E4AC538D2128DC29002059C5 /* ShoppingCart */,
 				A74423EA2128C44C00FDF37D /* ProductSelection */,
@@ -594,6 +599,15 @@
 			path = Ingredients;
 			sourceTree = "<group>";
 		};
+		E4AC539921290413002059C5 /* ProductSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E4AC539A21290424002059C5 /* ProductSearchTableViewCell.swift */,
+				E4AC539B21290424002059C5 /* ProductSearchTableViewCell.xib */,
+			);
+			path = ProductSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,6 +707,7 @@
 				E48BF80821288A8100B6C514 /* Main.storyboard in Resources */,
 				E48BF8422128A5E200B6C514 /* Payment.storyboard in Resources */,
 				A74423DA2128B37C00FDF37D /* MyMeals.storyboard in Resources */,
+				E4AC539D21290424002059C5 /* ProductSearchTableViewCell.xib in Resources */,
 				A7A0FDD02128C5CC00E76759 /* ProductSelectionTableViewCell.xib in Resources */,
 				A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */,
 				E48BF87E2128C66800B6C514 /* Register.storyboard in Resources */,
@@ -795,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4AC539C21290424002059C5 /* ProductSearchTableViewCell.swift in Sources */,
 				E48BF8562128A98C00B6C514 /* RegisterMenuViewController.swift in Sources */,
 				E48BF8542128A98100B6C514 /* RegisterMealViewController.swift in Sources */,
 				A7A0FDD42128C83400E76759 /* ProductSelectionSectionHeaderView.swift in Sources */,

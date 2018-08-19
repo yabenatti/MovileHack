@@ -1,5 +1,5 @@
 //
-//  IngredientsTableViewCell.swift
+//  ProductSearchTableViewCell.swift
 //  MovileHack
 //
 //  Created by Yasmin Benatti on 2018-08-18.
@@ -8,12 +8,22 @@
 
 import UIKit
 
-class IngredientsTableViewCell: UITableViewCell {
-    
+class ProductSearchTableViewCell: UITableViewCell {
+
     // MARK: - IBOutlets
     
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var productImageView: UIImageView! {
+        didSet {
+            self.productImageView.contentMode = .scaleAspectFill
+            self.productImageView.layer.cornerRadius = 10.0
+            self.productImageView.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var productNameLabel: UILabel! {
+        didSet {
+            self.productNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        }
+    }
     
     // MARK: - Lifecycle
     
