@@ -67,12 +67,8 @@ class ProductSelectionTableViewCell: UITableViewCell {
         purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17, weight: .bold)], range: NSRange.init(location: 0, length: purveyorProduct.purveyor.name.count))
         purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15)], range: NSRange(location: purveyorProduct.purveyor.name.count, length: purveyorInfoString.count - purveyorProduct.purveyor.name.count))
         self.productPurveyorInfoLabel.attributedText = purveyorInfoAttributedString
-        
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale(identifier: "pt_br")
-        let price = currencyFormatter.string(from: NSNumber(floatLiteral: purveyorProduct.price)) ?? ""
-        self.productPriceLabel.text = price
+
+        self.productPriceLabel.text = PriceUtils.getFormattedPrice(purveyorProduct.price)
 
         if isSelected {
             self.selectedImageView.image = UIImage(named: "checkmark")

@@ -13,7 +13,7 @@ final class Cart {
     static private var sharedInstance: Cart?
     
     // MARK: - Variables
-    private(set) var purveyorProducts = [PurveyorProduct]()
+    private var purveyorProducts = [PurveyorProduct]()
     
     // MARK: - Singleton Methods
     static func getSharedInstance() -> Cart {
@@ -48,6 +48,8 @@ final class Cart {
     }
     
     func addProducts(_ products: [PurveyorProduct]) {
+        //Checks if product is from the same purvoyer
+        //Add quantity and price if it is
         for purveyorProduct in products {
             let product = purveyorProduct.product
             if let index = self.purveyorProducts.index(where: { (purveyorProduct) -> Bool in return purveyorProduct.product == product }) {
@@ -59,5 +61,20 @@ final class Cart {
         }
         
         TabBarUtils.setCartTabbarNumber(self.getNumberOfProducts())
+    }
+    
+    func getProductsByPurvoyer() -> [Purveyor : [PurveyorProduct]] {
+        var purvoyerDict = [Purveyor : [PurveyorProduct]]()
+        
+        for purveyorProduct in self.purveyorProducts {
+            let purveyor = purveyorProduct.purveyor
+            if purvoyerDict[purveyor] != nil {
+                purvoyerDict[purveyor]?.append(purveyorProduct)
+            } else {
+                purvoyerDict[purveyor] = [purveyorProduct]
+            }
+        }
+        
+        return purvoyerDict
     }
 }

@@ -20,15 +20,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0T-Lv-tqo">
-                        <rect key="frame" x="16" y="4" width="54" height="19.5"/>
+                        <rect key="frame" x="16" y="6" width="54" height="25.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh Food " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNR-Or-ytU">
-                        <rect key="frame" x="16" y="25.5" width="76.5" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 un" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-H4-hq1">
@@ -43,24 +37,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-Kh-lw8">
+                        <rect key="frame" x="16" y="42.5" width="304" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="CZX-1L-TU9"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="d0T-Lv-tqo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6EG-mN-58s"/>
+                    <constraint firstAttribute="bottom" secondItem="Ua0-Kh-lw8" secondAttribute="bottom" id="72R-NS-x36"/>
                     <constraint firstAttribute="trailing" secondItem="AMT-5e-BkH" secondAttribute="trailing" constant="16" id="CM8-WU-6oM"/>
                     <constraint firstItem="0v3-H4-hq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0T-Lv-tqo" secondAttribute="trailing" constant="8" id="HMX-ar-Vd6"/>
                     <constraint firstItem="0v3-H4-hq1" firstAttribute="centerY" secondItem="AMT-5e-BkH" secondAttribute="centerY" id="J9t-Wd-kwF"/>
-                    <constraint firstItem="d0T-Lv-tqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="M2D-RK-QBk"/>
+                    <constraint firstItem="d0T-Lv-tqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="M2D-RK-QBk"/>
                     <constraint firstItem="AMT-5e-BkH" firstAttribute="leading" secondItem="0v3-H4-hq1" secondAttribute="trailing" constant="8" id="Mnt-wh-hUi"/>
-                    <constraint firstItem="0v3-H4-hq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KNR-Or-ytU" secondAttribute="trailing" constant="8" id="Nq9-gC-uOb"/>
-                    <constraint firstItem="KNR-Or-ytU" firstAttribute="top" secondItem="d0T-Lv-tqo" secondAttribute="bottom" constant="2" id="QdI-MV-RqU"/>
+                    <constraint firstAttribute="trailing" secondItem="Ua0-Kh-lw8" secondAttribute="trailing" id="Mya-fn-azx"/>
+                    <constraint firstAttribute="bottom" secondItem="d0T-Lv-tqo" secondAttribute="bottom" constant="12" id="OLY-yJ-fGR"/>
                     <constraint firstItem="AMT-5e-BkH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ru3-Xo-fQn"/>
-                    <constraint firstItem="KNR-Or-ytU" firstAttribute="leading" secondItem="d0T-Lv-tqo" secondAttribute="leading" id="rsg-cu-Z1L"/>
+                    <constraint firstItem="Ua0-Kh-lw8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="osg-rv-Mne"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="productNameLabel" destination="d0T-Lv-tqo" id="a4I-0n-kwm"/>
-                <outlet property="purveyorNameLabel" destination="KNR-Or-ytU" id="SZy-lL-AyC"/>
+                <outlet property="separatorLineView" destination="Ua0-Kh-lw8" id="Eij-nG-3Ph"/>
                 <outlet property="totalPriceLabel" destination="AMT-5e-BkH" id="79V-aw-hp9"/>
                 <outlet property="totalQuantityLabel" destination="0v3-H4-hq1" id="iIE-ts-zII"/>
             </connections>

@@ -33,6 +33,9 @@
 		A7A0FDEE2129175400E76759 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDED2129175400E76759 /* ProductService.swift */; };
 		A7A0FDF02129321900E76759 /* PurveyorProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDEF2129321900E76759 /* PurveyorProductService.swift */; };
 		A7A0FDF22129327D00E76759 /* PurveyorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF12129327D00E76759 /* PurveyorService.swift */; };
+		A7A0FDF521294D4000E76759 /* ShoppingCartTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF421294D4000E76759 /* ShoppingCartTableHeaderView.swift */; };
+		A7A0FDF721294D4900E76759 /* ShoppingCartTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0FDF621294D4900E76759 /* ShoppingCartTableHeaderView.xib */; };
+		A7A0FDF921294F8100E76759 /* PriceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0FDF821294F8100E76759 /* PriceUtils.swift */; };
 		E48BF80321288A8100B6C514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BF80221288A8100B6C514 /* AppDelegate.swift */; };
 		E48BF80821288A8100B6C514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80621288A8100B6C514 /* Main.storyboard */; };
 		E48BF80A21288A8200B6C514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48BF80921288A8200B6C514 /* Assets.xcassets */; };
@@ -130,6 +133,9 @@
 		A7A0FDED2129175400E76759 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		A7A0FDEF2129321900E76759 /* PurveyorProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurveyorProductService.swift; sourceTree = "<group>"; };
 		A7A0FDF12129327D00E76759 /* PurveyorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurveyorService.swift; sourceTree = "<group>"; };
+		A7A0FDF421294D4000E76759 /* ShoppingCartTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableHeaderView.swift; sourceTree = "<group>"; };
+		A7A0FDF621294D4900E76759 /* ShoppingCartTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartTableHeaderView.xib; sourceTree = "<group>"; };
+		A7A0FDF821294F8100E76759 /* PriceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceUtils.swift; sourceTree = "<group>"; };
 		CA85567DEBE717324BAA7831 /* Pods_MovileHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF7FF21288A8100B6C514 /* MovileHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48BF80221288A8100B6C514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 		A7A0FDD12128C80400E76759 /* Table Headers */ = {
 			isa = PBXGroup;
 			children = (
+				A7A0FDF321294D2B00E76759 /* ShoppingCartTableHeaderView */,
 				A7A0FDD22128C81400E76759 /* ProductSelectionSectionHeaderView */,
 			);
 			path = "Table Headers";
@@ -297,6 +304,15 @@
 				A7A0FDD52128C85000E76759 /* ProductSelectionSectionHeaderView.xib */,
 			);
 			path = ProductSelectionSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		A7A0FDF321294D2B00E76759 /* ShoppingCartTableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0FDF421294D4000E76759 /* ShoppingCartTableHeaderView.swift */,
+				A7A0FDF621294D4900E76759 /* ShoppingCartTableHeaderView.xib */,
+			);
+			path = ShoppingCartTableHeaderView;
 			sourceTree = "<group>";
 		};
 		D6E716C5279F7F31EB54EA63 /* Pods */ = {
@@ -585,6 +601,7 @@
 				A7A0FDE121290A0800E76759 /* TabBarUtils.swift */,
 				A7A0FDE72129161B00E76759 /* ProductUnit.swift */,
 				E4AC53AF21293937002059C5 /* iOSUtils.swift */,
+				A7A0FDF821294F8100E76759 /* PriceUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -772,6 +789,7 @@
 				A74423D82128AA3600FDF37D /* ShowProduct.storyboard in Resources */,
 				E4AC53982128F553002059C5 /* IngredientsTableViewCell.xib in Resources */,
 				E48BF8852128C6ED00B6C514 /* ShoppingCart.storyboard in Resources */,
+				A7A0FDF721294D4900E76759 /* ShoppingCartTableHeaderView.xib in Resources */,
 				E48BF80D21288A8200B6C514 /* LaunchScreen.storyboard in Resources */,
 				E4AC53912128DD39002059C5 /* ShoppingCartProductTableViewCell.xib in Resources */,
 				E48BF86E2128B7F600B6C514 /* ProductSelection.storyboard in Resources */,
@@ -917,6 +935,7 @@
 				E48BF8442128A92400B6C514 /* GraphsViewController.swift in Sources */,
 				E48BF84C2128A94D00B6C514 /* ShowMenuViewController.swift in Sources */,
 				A7A0FDDC2128E0D700E76759 /* NotificationName.swift in Sources */,
+				A7A0FDF521294D4000E76759 /* ShoppingCartTableHeaderView.swift in Sources */,
 				E48BF8502128A96000B6C514 /* ShowPurveyorViewController.swift in Sources */,
 				E48BF8722128BB8200B6C514 /* Product.swift in Sources */,
 				E48BF85C2128A9A900B6C514 /* RegisterRestaurantViewController.swift in Sources */,
@@ -944,6 +963,7 @@
 				A7A0FDF02129321900E76759 /* PurveyorProductService.swift in Sources */,
 				E48BF8702128B95100B6C514 /* ImageUtils.swift in Sources */,
 				E48BF87C2128C64100B6C514 /* ProductsViewController.swift in Sources */,
+				A7A0FDF921294F8100E76759 /* PriceUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,10 @@ extension UIColor {
     public class var dropShadow : UIColor {
         return UIColor(hex: "337b9f", alpha: 1)
     }
+    
+    public class var darkBlue : UIColor {
+        return UIColor(hex: "4C51CD", alpha: 1)
+    }
 }
 
 extension UIColor {
