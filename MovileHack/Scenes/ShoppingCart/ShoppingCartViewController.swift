@@ -60,6 +60,12 @@ class ShoppingCartViewController: BaseViewController {
             }
             self.totalLabel.text = "Total \n\(PriceUtils.getFormattedPrice(totalPrice))"
             
+            if self.purveyorProductSections.count > 0 {
+                self.payButton.isEnabled = true
+            } else {
+                self.payButton.isEnabled = false
+            }
+            
             self.tableView.reloadData()
         }
     }
