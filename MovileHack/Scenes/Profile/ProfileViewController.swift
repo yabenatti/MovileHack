@@ -41,7 +41,9 @@ class ProfileViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.showLoadingView(isLarge: true)
         FacadeService.getCurrentRestaurant { (restaurant) in
+            self.hideLoadingView()
             self.restaurant = restaurant
             if let restaurant = self.restaurant {
                 self.populateViewWithRestaurant(restaurant)

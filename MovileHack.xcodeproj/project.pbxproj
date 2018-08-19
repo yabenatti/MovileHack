@@ -82,6 +82,9 @@
 		E4AC53A52129218A002059C5 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53A42129218A002059C5 /* Restaurant.swift */; };
 		E4AC53A7212932D4002059C5 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53A6212932D4002059C5 /* RestaurantService.swift */; };
 		E4AC53A921293724002059C5 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53A821293724002059C5 /* CALayerExtension.swift */; };
+		E4AC53AC212938F1002059C5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53AB212938F1002059C5 /* LoadingView.swift */; };
+		E4AC53AE212938FA002059C5 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4AC53AD212938FA002059C5 /* LoadingView.xib */; };
+		E4AC53B021293937002059C5 /* iOSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC53AF21293937002059C5 /* iOSUtils.swift */; };
 		F100EBDFFDE27B07F9778811 /* Pods_MovileHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +182,9 @@
 		E4AC53A42129218A002059C5 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		E4AC53A6212932D4002059C5 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
 		E4AC53A821293724002059C5 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		E4AC53AB212938F1002059C5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E4AC53AD212938FA002059C5 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		E4AC53AF21293937002059C5 /* iOSUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUtils.swift; sourceTree = "<group>"; };
 		E721AFBE3E735EAB27CE0151 /* Pods_MovileHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,7 @@
 		A74423E02128B57800FDF37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4AC53AA212938DC002059C5 /* LoadingView */,
 				E4AC539E21291D54002059C5 /* Components */,
 				A7A0FDD12128C80400E76759 /* Table Headers */,
 				A74423E72128BF9000FDF37D /* UI */,
@@ -571,6 +578,7 @@
 				A7A0FDDD2128E13E00E76759 /* NotificationCenterKeys.swift */,
 				A7A0FDE121290A0800E76759 /* TabBarUtils.swift */,
 				A7A0FDE72129161B00E76759 /* ProductUnit.swift */,
+				E4AC53AF21293937002059C5 /* iOSUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -658,6 +666,15 @@
 				E4AC53A221291D9D002059C5 /* UnderlinedTitleLabel.xib */,
 			);
 			path = UnderlinedTitleLabel;
+			sourceTree = "<group>";
+		};
+		E4AC53AA212938DC002059C5 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				E4AC53AB212938F1002059C5 /* LoadingView.swift */,
+				E4AC53AD212938FA002059C5 /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -763,6 +780,7 @@
 				E4AC539D21290424002059C5 /* ProductSearchTableViewCell.xib in Resources */,
 				A7A0FDD02128C5CC00E76759 /* ProductSelectionTableViewCell.xib in Resources */,
 				A74423E62128B5A400FDF37D /* MyMealsTableViewCell.xib in Resources */,
+				E4AC53AE212938FA002059C5 /* LoadingView.xib in Resources */,
 				E48BF87E2128C66800B6C514 /* Register.storyboard in Resources */,
 				A7A0FDD62128C85000E76759 /* ProductSelectionSectionHeaderView.xib in Resources */,
 			);
@@ -877,6 +895,7 @@
 				E48BF8832128C6AF00B6C514 /* ProfileViewController.swift in Sources */,
 				A7A0FDE4212915E300E76759 /* Purveyor.swift in Sources */,
 				E48BF86A2128B68100B6C514 /* MealQuantityViewController.swift in Sources */,
+				E4AC53B021293937002059C5 /* iOSUtils.swift in Sources */,
 				E4AC53A52129218A002059C5 /* Restaurant.swift in Sources */,
 				E4AC538C2128CACC002059C5 /* UIColorExtension.swift in Sources */,
 				E48BF8602128A9B800B6C514 /* ShoppingCartViewController.swift in Sources */,
@@ -898,6 +917,7 @@
 				A7A0FDE62129160500E76759 /* PurveyorProduct.swift in Sources */,
 				A7A0FDDA2128DD5400E76759 /* BaseViewController.swift in Sources */,
 				A74423DD2128B40A00FDF37D /* MyMealsViewController.swift in Sources */,
+				E4AC53AC212938F1002059C5 /* LoadingView.swift in Sources */,
 				E48BF83D2128A42A00B6C514 /* NavigationConstants.swift in Sources */,
 				E4AC53A7212932D4002059C5 /* RestaurantService.swift in Sources */,
 				E48BF8522128A97500B6C514 /* ShowRestaurantViewController.swift in Sources */,
