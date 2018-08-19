@@ -27,9 +27,9 @@ final class PurveyorProductService {
         } else if productId == "102" {
             return 0.44 * purveyorModifier
         } else if productId == "103" {
-            return 0.015 * purveyorModifier
+            return 0.045 * purveyorModifier
         } else if productId == "104" {
-            return 0.02 * purveyorModifier
+            return 0.06 * purveyorModifier
         } else {
             return 1.0 * purveyorModifier
         }
