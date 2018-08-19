@@ -9,13 +9,11 @@
 import UIKit
 
 protocol MealQuantityViewControllerDelegate : class {
-    func selectedMealQuantity(meal: Meal, quantity: Int)
+    func selectedMealQuantity(meal: Meal, quantity: UInt)
 }
 
 class MealQuantityViewController: BaseViewController {
-    
     // MARK: - IBOutlets
-    
     @IBOutlet weak var contentView: UIView! {
         didSet {
             self.contentView.layer.cornerRadius = 10
@@ -102,9 +100,8 @@ class MealQuantityViewController: BaseViewController {
             return
         }
         
-        self.dismiss(animated: true) {
-            self.delegate?.selectedMealQuantity(meal: meal, quantity: Int(self.mealQuantityStepper.value))
-        }
+        self.dismiss(animated: true, completion: nil)
+        self.delegate?.selectedMealQuantity(meal: meal, quantity: UInt(self.mealQuantityStepper.value))
     }
     
     @IBAction func didTapStepperButton(_ sender: Any) {
@@ -142,7 +139,7 @@ extension MealQuantityViewController : UITableViewDataSource {
         }
         
         cell.selectionStyle = .none
-        cell.populateWithProduct(meal.products[indexPath.row])
+        cell.populateWithMealProduct(meal.products[indexPath.row])
         
         return cell
     }

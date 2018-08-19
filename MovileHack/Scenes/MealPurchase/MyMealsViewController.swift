@@ -17,17 +17,48 @@ class MyMealsViewController: BaseViewController {
             self.myMealsTableView.estimatedRowHeight = 50.0
             self.myMealsTableView.rowHeight = UITableViewAutomaticDimension
             
+            self.myMealsTableView.separatorStyle = .none
+            
             self.myMealsTableView.register(MyMealsTableViewCell.self, forCellReuseIdentifier: String(describing: MyMealsTableViewCell.self))
             self.myMealsTableView.register(UINib(nibName: String(describing: MyMealsTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyMealsTableViewCell.self))
         }
     }
+    @IBOutlet weak var selectPricesButton: CTAButton! {
+        didSet {
+            self.selectPricesButton.setTitle("Escolher Preços", for: .normal)
+        }
+    }
+    
+    // MARK: - Constraints
+    @IBOutlet weak var selectPricesButtonTopConstraint: NSLayoutConstraint! {
+        didSet {
+            self.originalSelectPricesButtonTopConstraintConstant = self.selectPricesButtonTopConstraint.constant
+        }
+    }
+    @IBOutlet weak var selectPricesButtonBottomConstraint: NSLayoutConstraint! {
+        didSet {
+            self.originalSelectPricesButtonBottomConstraintConstant = self.selectPricesButtonBottomConstraint.constant
+        }
+    }
+    @IBOutlet weak var selectPricesButtonHeightConstraint: NSLayoutConstraint! {
+        didSet {
+            self.originalSelectPricesButtonHeightConstraintConstant = self.selectPricesButtonHeightConstraint.constant
+        }
+    }
 
     // MARK: - Variables
+    //Used to store initial constraints constants
+    private var originalSelectPricesButtonTopConstraintConstant: CGFloat = 0.0
+    private var originalSelectPricesButtonBottomConstraintConstant: CGFloat = 0.0
+    private var originalSelectPricesButtonHeightConstraintConstant: CGFloat = 0.0
+    
     private var meals = [Meal]() {
         didSet {
             self.myMealsTableView.reloadData()
         }
     }
+    // Meal ID : Selected quantity
+    private var selectedMeals = [Meal : UInt]()
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -35,17 +66,20 @@ class MyMealsViewController: BaseViewController {
 
         self.navigationItem.title = "Meus Pratos"
         
-        let meal = Meal(id: "123123123", name: "Salada de Frutas", imageUrl: "https://www.nossopomar.com.br/wp-content/uploads/2017/12/nosso-pomar-salada-frutas-sacolao-virtual-bh-hortifruti.jpg")
-        meal.products = [Product(id: "123812", name: "Banana", expirationDate: Date(), imageUrl: "http://static1.conquistesuavida.com.br/ingredients/5/54/26/75/@/24677--ingredient_detail_ingredient-2.png"),
-                         Product(id: "19028312", name: "Maça", expirationDate: Date(), imageUrl: "https://superprix.vteximg.com.br/arquivos/ids/175207-600-600/Maca-Argentina--1-unidade-aprox.-200g-.png?v=636294203590200000"),
-                         Product(id: "124721498217", name: "Goiaba", expirationDate: Date(), imageUrl: nil)]
-        self.meals.append(meal)
+        FacadeService.getAllUserMeals { (meals) in
+            if let meals = meals {
+                self.meals = meals
+            }
+        }
+     
+        self.hideSelectPricesButton()
         
         NotificationCenter.default.addObserver(self, selector: #selector(mealImageDownloaded(notification:)), name: .MealImageDownloaded, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         self.tabBarController?.tabBar.isHidden = false
     }
     
@@ -61,8 +95,38 @@ class MyMealsViewController: BaseViewController {
         
         self.myMealsTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
     }
+    
+    // MARK: - IBActions
+    @IBAction func didTapSelectPricesButton(_ sender: Any) {
+        if let productSelectionViewController = UIStoryboard(name: .ProductSelection).instantiateViewController(withIdentifier: ViewControllerName.ProductSelectionViewController) as? ProductSelectionViewController {
+            var products = [Product]()
+            for (meal, _) in self.selectedMeals {
+                for product in meal.products {
+//                    if !products.contains(product) {
+//                        products.append(product)
+//                    }
+                }
+            }
+            productSelectionViewController.products = products
+            self.navigationController?.pushViewController(productSelectionViewController, animated: true)
+        }
+    }
+    
+    // MARK: - Layout
+    private func showSelectPricesButton() {
+        self.selectPricesButtonTopConstraint.constant = self.originalSelectPricesButtonTopConstraintConstant
+        self.selectPricesButtonBottomConstraint.constant = self.originalSelectPricesButtonBottomConstraintConstant
+        self.selectPricesButtonHeightConstraint.constant = self.originalSelectPricesButtonHeightConstraintConstant
+    }
+    
+    private func hideSelectPricesButton() {
+        self.selectPricesButtonTopConstraint.constant = 0.0
+        self.selectPricesButtonBottomConstraint.constant = 0.0
+        self.selectPricesButtonHeightConstraint.constant = 0.0
+    }
 }
 
+// MARK: - UITableViewDelegate
 extension MyMealsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: .MealQuantity).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
@@ -75,6 +139,7 @@ extension MyMealsViewController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MyMealsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.meals.count
@@ -91,10 +156,24 @@ extension MyMealsViewController : UITableViewDataSource {
     }
 }
 
+// MARK: - MealQuantityViewControllerDelegate
 extension MyMealsViewController : MealQuantityViewControllerDelegate {
-    func selectedMealQuantity(meal: Meal, quantity: Int) {
-        // FIXME: Finish this
-        print("hi delegate")
+    func selectedMealQuantity(meal: Meal, quantity: UInt) {
+//        var products = [Product : UInt]()
+//        for product in meal.products {
+//            products[product] = UInt(quantity)
+//        }
+//        Cart.getSharedInstance().addProducts(products)
+
+        if let mealQuantity = self.selectedMeals[meal] {
+            self.selectedMeals[meal] = quantity + mealQuantity
+        } else {
+            self.selectedMeals[meal] = quantity
+        }
+        
+        if self.selectedMeals.count > 0 {
+            self.showSelectPricesButton()
+        }
     }
 }
 

@@ -52,8 +52,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="priceLabel" destination="Tx0-HL-oJc" id="DYH-2P-bzo"/>
-                <outlet property="productNameLabel" destination="5tb-aw-aM8" id="b3c-E6-Nwp"/>
+                <outlet property="productNameLabel" destination="5tb-aw-aM8" id="vy9-TZ-H1v"/>
+                <outlet property="productQuantityLabel" destination="Tx0-HL-oJc" id="vu4-Pq-yWp"/>
             </connections>
         </tableViewCell>
     </objects>

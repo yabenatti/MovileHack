@@ -19,22 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6bc-ie-2Pc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-Pc-dYK" customClass="CTAButton" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="40" y="480" width="295" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0hQ-te-sFd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapSelectPricesButton:" destination="Z4Q-MW-KkV" eventType="touchUpInside" id="QkT-Un-OXK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z8b-7o-A0b" firstAttribute="bottom" secondItem="6bc-ie-2Pc" secondAttribute="bottom" id="2Op-1d-uqE"/>
                             <constraint firstItem="6bc-ie-2Pc" firstAttribute="leading" secondItem="Z8b-7o-A0b" secondAttribute="leading" id="6T7-Ib-JSm"/>
+                            <constraint firstItem="Z8b-7o-A0b" firstAttribute="trailing" secondItem="PR7-Pc-dYK" secondAttribute="trailing" constant="40" id="CA1-l5-FKf"/>
+                            <constraint firstItem="Z8b-7o-A0b" firstAttribute="bottom" secondItem="PR7-Pc-dYK" secondAttribute="bottom" constant="24" id="GE3-68-T67"/>
                             <constraint firstItem="Z8b-7o-A0b" firstAttribute="trailing" secondItem="6bc-ie-2Pc" secondAttribute="trailing" id="NP5-F1-xfA"/>
-                            <constraint firstItem="6bc-ie-2Pc" firstAttribute="top" secondItem="Z8b-7o-A0b" secondAttribute="top" id="Od5-GG-WHA"/>
+                            <constraint firstItem="6bc-ie-2Pc" firstAttribute="top" secondItem="Z8b-7o-A0b" secondAttribute="top" id="Wzp-D5-kAJ"/>
+                            <constraint firstItem="PR7-Pc-dYK" firstAttribute="leading" secondItem="Z8b-7o-A0b" secondAttribute="leading" constant="40" id="Y70-W9-Z7b"/>
+                            <constraint firstItem="PR7-Pc-dYK" firstAttribute="top" secondItem="6bc-ie-2Pc" secondAttribute="bottom" constant="8" id="gBJ-Xu-YfC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z8b-7o-A0b"/>
                     </view>
                     <navigationItem key="navigationItem" id="tMH-BE-5Ix"/>
                     <connections>
                         <outlet property="myMealsTableView" destination="6bc-ie-2Pc" id="RS6-aJ-Nl4"/>
+                        <outlet property="selectPricesButton" destination="PR7-Pc-dYK" id="zGP-FK-7tt"/>
+                        <outlet property="selectPricesButtonBottomConstraint" destination="GE3-68-T67" id="kPb-vt-WM6"/>
+                        <outlet property="selectPricesButtonHeightConstraint" destination="0hQ-te-sFd" id="4Ya-AE-OL6"/>
+                        <outlet property="selectPricesButtonTopConstraint" destination="gBJ-Xu-YfC" id="bwY-cQ-IZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzp-Nk-YMA" userLabel="First Responder" sceneMemberID="firstResponder"/>

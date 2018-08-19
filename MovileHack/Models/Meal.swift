@@ -8,13 +8,25 @@
 
 import UIKit
 
-class Meal {
+final class MealProduct {
+    let product: Product
+    let quantity: Double
+    let unit: ProductUnit
+    
+    init(product: Product, quantity: Double, unit: ProductUnit) {
+        self.product = product
+        self.quantity = quantity
+        self.unit = unit
+    }
+}
+
+final class Meal : Hashable, Equatable {
     // MARK: - Properties
     let id: String
     let name: String
     let imageUrl: String?
     var image: UIImage?
-    var products = [Product]()
+    var products = [MealProduct]()
     
     // MARK: - Initializers
     init(id: String, name: String, imageUrl: String?) {
@@ -26,6 +38,17 @@ class Meal {
         self.getMealImage()
     }
     
+    // MARK: - Hashable
+    var hashValue: Int {
+        return self.id.hashValue
+    }
+    
+    // MARK: - Equatable
+    static func == (lhs: Meal, rhs: Meal) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    // MARK: - Methods
     func getMealImage() {
         guard let urlString = self.imageUrl, let photoUrl = URL(string: urlString) else {
             return

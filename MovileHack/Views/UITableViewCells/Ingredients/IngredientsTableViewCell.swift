@@ -9,14 +9,11 @@
 import UIKit
 
 class IngredientsTableViewCell: UITableViewCell {
-    
     // MARK: - IBOutlets
-    
     @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var productQuantityLabel: UILabel!
     
     // MARK: - Lifecycle
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,8 +25,9 @@ class IngredientsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func populateWithProduct(_ product: Product) {
-        self.productNameLabel.text = product.name
+    func populateWithMealProduct(_ mealProduct: MealProduct) {
+        self.productNameLabel.text = mealProduct.product.name
+        self.productQuantityLabel.text = "\(mealProduct.quantity)\(mealProduct.unit.rawValue)"
         
         // FIXME: - Price
     }

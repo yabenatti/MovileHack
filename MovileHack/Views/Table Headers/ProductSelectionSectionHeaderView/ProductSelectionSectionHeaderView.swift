@@ -10,7 +10,11 @@ import UIKit
 
 class ProductSelectionSectionHeaderView: BaseView {
     // MARK: - IBOutlets
-    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel! {
+        didSet {
+            self.productNameLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+        }
+    }
     
     // MARK: - Methods
     func setup(product: Product) {

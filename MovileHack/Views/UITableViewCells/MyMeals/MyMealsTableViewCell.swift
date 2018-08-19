@@ -27,6 +27,11 @@ class MyMealsTableViewCell: UITableViewCell {
             self.productsLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         }
     }
+    @IBOutlet weak var lineSeparatorView: UIView! {
+        didSet {
+            self.lineSeparatorView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+        }
+    }
     
     // MARK: - Methods
     override func awakeFromNib() {
@@ -53,7 +58,7 @@ class MyMealsTableViewCell: UITableViewCell {
         //Meal Products and Quantity
         var mealProductsAndQuantityLabelString = ""
         for i in 0..<meal.products.count {
-            let product = meal.products[i]
+            let product = meal.products[i].product
             if i == 0 {
                 if meal.products.count > 1 {
                     mealProductsAndQuantityLabelString.append(product.name + ", ")

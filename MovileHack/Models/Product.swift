@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Product {
+final class Product: Hashable, Equatable {
     // MARK: - Properties
     let id: String
     let name: String
@@ -27,6 +27,17 @@ class Product {
         self.getProductImage()
     }
     
+    // MARK: - Hashable
+    var hashValue: Int {
+        return self.id.hashValue
+    }
+    
+    // MARK: - Equatable
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    // MARK: - Methods
     func getProductImage() {
         guard let urlString = self.imageUrl, let imageUrl = URL(string: urlString) else {
             return
