@@ -8,9 +8,6 @@ target 'MovileHack' do
   # Pods for MovileHack
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.1'
-  pod 'Stripe'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
 
   target 'MovileHackTests' do
     inherit! :search_paths
