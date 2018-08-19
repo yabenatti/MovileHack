@@ -58,7 +58,7 @@ class ShoppingCartViewController: BaseViewController {
                     totalPrice += purveyorProduct.price
                 }
             }
-            self.totalLabel.text = "Total: \(PriceUtils.getFormattedPrice(totalPrice))"
+            self.totalLabel.text = "Total \n\(PriceUtils.getFormattedPrice(totalPrice))"
             
             self.tableView.reloadData()
         }

@@ -32,6 +32,20 @@ class MyMealsTableViewCell: UITableViewCell {
             self.lineSeparatorView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
         }
     }
+    @IBOutlet weak var addedToCartView: UIView! {
+        didSet {
+            self.addedToCartView.layer.cornerRadius = addedToCartView.frame.height / 2.0 - 4.0
+            self.addedToCartView.clipsToBounds = true
+            self.addedToCartView.contentMode = .scaleAspectFill
+            self.addedToCartView.backgroundColor = UIColor.movilePink
+        }
+    }
+    @IBOutlet weak var addedToCartLabel: UILabel! {
+        didSet {
+            self.addedToCartLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+            self.addedToCartLabel.textColor = UIColor.white
+        }
+    }
     
     // MARK: - Methods
     override func awakeFromNib() {
@@ -46,7 +60,7 @@ class MyMealsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(meal: Meal) {
+    func setup(meal: Meal, quantity: UInt? = nil) {
         if let mealImage = meal.image {
             self.mealImageView.image = mealImage
         } else {
@@ -72,5 +86,12 @@ class MyMealsTableViewCell: UITableViewCell {
             }
         }
         self.productsLabel.text = mealProductsAndQuantityLabelString
+        
+        if let quantity = quantity {
+            self.addedToCartLabel.text = "\(quantity)"
+            self.addedToCartView.isHidden = false
+        } else {
+            self.addedToCartView.isHidden = true
+        }
     }
 }

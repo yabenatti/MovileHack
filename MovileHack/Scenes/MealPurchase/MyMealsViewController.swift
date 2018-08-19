@@ -145,7 +145,7 @@ extension MyMealsViewController : UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setup(meal: self.meals[indexPath.row])
+        cell.setup(meal: self.meals[indexPath.row], quantity: self.selectedMeals[self.meals[indexPath.row]])
         
         return cell
     }
@@ -161,6 +161,9 @@ extension MyMealsViewController : MealQuantityViewControllerDelegate {
         }
         
         if self.selectedMeals.count > 0 {
+            if let index = self.meals.index(of: meal) {
+                self.myMealsTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+            }
             self.showSelectPricesButton()
         }
     }
@@ -170,5 +173,6 @@ extension MyMealsViewController : ProductSelectionViewControllerDelegate {
     func didAddProducts() {
         self.selectedMeals.removeAll()
         self.hideSelectPricesButton()
+        self.myMealsTableView.reloadData()
     }
 }

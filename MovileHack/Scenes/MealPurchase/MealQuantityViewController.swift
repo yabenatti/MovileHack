@@ -38,8 +38,6 @@ class MealQuantityViewController: BaseViewController {
             self.productsTableView.register(UINib(nibName: String(describing: IngredientsTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: IngredientsTableViewCell.self))
         }
     }
-    @IBOutlet weak var totalItemsLabel: UILabel!
-    @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var mealQuantityTitleLabel: UILabel! {
         didSet {
             mealQuantityTitleLabel.text = "Quantidade:"
@@ -92,7 +90,6 @@ class MealQuantityViewController: BaseViewController {
         }
         
         self.compositionLabel.text = meal.name
-        self.totalItemsLabel.text = "Total: \(meal.products.count) itens"
     }
     
     // MARK: - IBActions

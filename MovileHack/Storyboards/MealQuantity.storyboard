@@ -40,24 +40,10 @@
                                             <constraint firstAttribute="width" constant="80" id="v7b-Ry-4O0"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWQ-m1-Ean" userLabel="total">
-                                        <rect key="frame" x="16" y="415" width="279" height="44"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: 5 itens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGE-Se-YF1">
-                                                <rect key="frame" x="165.5" y="11" width="97.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QRN-uj-RW4">
+                                        <rect key="frame" x="0.0" y="141" width="311" height="318"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wGE-Se-YF1" secondAttribute="trailing" constant="16" id="64c-dI-g8Q"/>
-                                            <constraint firstAttribute="height" constant="44" id="adv-ff-tV4"/>
-                                            <constraint firstItem="wGE-Se-YF1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dWQ-m1-Ean" secondAttribute="leading" constant="16" id="cbt-Sz-2QZ"/>
-                                            <constraint firstItem="wGE-Se-YF1" firstAttribute="centerY" secondItem="dWQ-m1-Ean" secondAttribute="centerY" id="nXg-3G-4Lc"/>
-                                        </constraints>
-                                    </view>
+                                    </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-Ok-me0" userLabel="quantidade">
                                         <rect key="frame" x="0.0" y="467" width="311" height="44"/>
                                         <subviews>
@@ -108,33 +94,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QRN-uj-RW4">
-                                        <rect key="frame" x="0.0" y="141" width="311" height="266"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mgI-1X-tVh" secondAttribute="trailing" constant="16" id="6D8-Ov-6qn"/>
                                     <constraint firstItem="l11-4H-8V8" firstAttribute="top" secondItem="O41-Pc-fRz" secondAttribute="top" constant="20" id="7X6-dh-ydt"/>
-                                    <constraint firstItem="dWQ-m1-Ean" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" constant="16" id="8Xm-jj-zhm"/>
-                                    <constraint firstAttribute="trailing" secondItem="dWQ-m1-Ean" secondAttribute="trailing" constant="16" id="B7F-vg-g8Z"/>
                                     <constraint firstItem="Q5D-Ok-me0" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" id="Eec-ox-TtJ"/>
                                     <constraint firstItem="QRN-uj-RW4" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" id="Rte-Tg-Icz"/>
                                     <constraint firstAttribute="trailing" secondItem="hnM-QD-1ff" secondAttribute="trailing" constant="16" id="Voc-dS-eB3"/>
                                     <constraint firstAttribute="trailing" secondItem="QRN-uj-RW4" secondAttribute="trailing" id="avf-OU-e6U"/>
                                     <constraint firstItem="QRN-uj-RW4" firstAttribute="top" secondItem="hnM-QD-1ff" secondAttribute="bottom" constant="8" id="cHZ-RH-DkJ"/>
+                                    <constraint firstItem="Q5D-Ok-me0" firstAttribute="top" secondItem="QRN-uj-RW4" secondAttribute="bottom" constant="8" id="eFY-h0-KlV"/>
                                     <constraint firstAttribute="trailing" secondItem="Q5D-Ok-me0" secondAttribute="trailing" id="g7Y-VT-DFn"/>
                                     <constraint firstItem="mgI-1X-tVh" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" constant="16" id="laX-yb-b9r"/>
                                     <constraint firstAttribute="bottom" secondItem="mgI-1X-tVh" secondAttribute="bottom" constant="16" id="lqj-ZQ-jhN"/>
-                                    <constraint firstItem="dWQ-m1-Ean" firstAttribute="top" secondItem="QRN-uj-RW4" secondAttribute="bottom" constant="8" id="mke-aK-bpw"/>
                                     <constraint firstItem="l11-4H-8V8" firstAttribute="centerX" secondItem="O41-Pc-fRz" secondAttribute="centerX" id="oVz-eV-hTV"/>
                                     <constraint firstItem="TLF-B7-aIB" firstAttribute="top" secondItem="O41-Pc-fRz" secondAttribute="top" constant="16" id="pdn-l2-AuF"/>
                                     <constraint firstAttribute="trailing" secondItem="TLF-B7-aIB" secondAttribute="trailing" constant="16" id="rwM-oM-4Wa"/>
                                     <constraint firstItem="hnM-QD-1ff" firstAttribute="leading" secondItem="O41-Pc-fRz" secondAttribute="leading" constant="16" id="tKu-Yn-yG0"/>
                                     <constraint firstItem="hnM-QD-1ff" firstAttribute="top" secondItem="l11-4H-8V8" secondAttribute="bottom" constant="12" id="umt-iE-nGC"/>
                                     <constraint firstItem="mgI-1X-tVh" firstAttribute="top" secondItem="Q5D-Ok-me0" secondAttribute="bottom" constant="8" id="w62-6U-PQ1"/>
-                                    <constraint firstItem="Q5D-Ok-me0" firstAttribute="top" secondItem="dWQ-m1-Ean" secondAttribute="bottom" constant="8" id="z8m-1M-D1b"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -160,7 +139,6 @@
                         <outlet property="mealQuantityTitleLabel" destination="QGr-zk-YVZ" id="v0O-3W-YiR"/>
                         <outlet property="nextButton" destination="mgI-1X-tVh" id="Eym-cj-jOm"/>
                         <outlet property="productsTableView" destination="QRN-uj-RW4" id="Uks-qt-gTV"/>
-                        <outlet property="totalItemsLabel" destination="wGE-Se-YF1" id="EeE-1o-yRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knK-A8-ySi" userLabel="First Responder" sceneMemberID="firstResponder"/>
