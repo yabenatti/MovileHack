@@ -9,19 +9,29 @@
 import UIKit
 
 final class PurveyorProductService {
-    private class func getBasePriceFor(productId: String) -> Double {
-        if productId == "100" {
-            return 0.37
-        } else if productId == "101" {
-            return 0.56
-        } else if productId == "102" {
-            return 0.44
-        } else if productId == "103" {
-            return 0.015
-        } else if productId == "104" {
-            return 0.02
+    private class func getBasePriceFor(productId: String, purveyorId: String) -> Double {
+        let purveyorModifier: Double
+        if purveyorId == "500" {
+            purveyorModifier = 0.53
+        } else if purveyorId == "501" {
+            purveyorModifier = 0.64
+        } else if purveyorId == "502" {
+            purveyorModifier = 0.31
         } else {
-            return 1.0
+            purveyorModifier = 1.0
+        }
+        if productId == "100" {
+            return 0.37 * purveyorModifier
+        } else if productId == "101" {
+            return 0.56 * purveyorModifier
+        } else if productId == "102" {
+            return 0.44 * purveyorModifier
+        } else if productId == "103" {
+            return 0.015 * purveyorModifier
+        } else if productId == "104" {
+            return 0.02 * purveyorModifier
+        } else {
+            return 1.0 * purveyorModifier
         }
     }
     
@@ -35,21 +45,21 @@ final class PurveyorProductService {
             dispatchGroup.enter()
             FacadeService.getPurveyor(purveyorId: "500", completion: { (purveyor) in
                 if let purveyor = purveyor {
-                    featuredProduct = PurveyorProduct(id: "1000", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id) * mealProduct.quantity, deliveryTime: 5.0)
+                    featuredProduct = PurveyorProduct(id: "1000", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id, purveyorId: purveyor.id) * mealProduct.quantity, deliveryTime: 5.0)
                 }
                 dispatchGroup.leave()
             })
             dispatchGroup.enter()
             FacadeService.getPurveyor(purveyorId: "501", completion: { (purveyor) in
                 if let purveyor = purveyor {
-                    fastestProduct = PurveyorProduct(id: "1001", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id) * mealProduct.quantity, deliveryTime: 2.8)
+                    fastestProduct = PurveyorProduct(id: "1001", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id, purveyorId: purveyor.id) * mealProduct.quantity, deliveryTime: 2.8)
                 }
                 dispatchGroup.leave()
             })
             dispatchGroup.enter()
             FacadeService.getPurveyor(purveyorId: "502", completion: { (purveyor) in
                 if let purveyor = purveyor {
-                    cheapestProduct = PurveyorProduct(id: "1002", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id) * mealProduct.quantity, deliveryTime: 9.25)
+                    cheapestProduct = PurveyorProduct(id: "1002", product: mealProduct.product, purveyor: purveyor, quantity: mealProduct.quantity, unit: mealProduct.unit, price: self.getBasePriceFor(productId: mealProduct.product.id, purveyorId: purveyor.id) * mealProduct.quantity, deliveryTime: 9.25)
                 }
                 dispatchGroup.leave()
             })
