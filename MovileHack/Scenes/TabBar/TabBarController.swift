@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        CALayer.setDropShadow(layer: self.tabBar.layer, radius: 6, opacity: 0.3)
     }
 
     override func didReceiveMemoryWarning() {

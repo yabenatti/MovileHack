@@ -12,6 +12,14 @@ extension UIColor {
     public class var movilePink : UIColor {
         return UIColor(hex: "F92D6C", alpha: 1)
     }
+    
+    public class var movileBlue : UIColor {
+        return UIColor(hex: "007AFF", alpha: 1)
+    }
+    
+    public class var dropShadow : UIColor {
+        return UIColor(hex: "337b9f", alpha: 1)
+    }
 }
 
 extension UIColor {

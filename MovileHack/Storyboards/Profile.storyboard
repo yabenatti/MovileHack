@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +18,81 @@
                     <view key="view" contentMode="scaleToFill" id="9P4-PU-SBK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-sX-Mtg" userLabel="headerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xNG-Fx-7OO">
+                                        <rect key="frame" x="155.5" y="24" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="DHQ-J1-8dy"/>
+                                            <constraint firstAttribute="width" secondItem="xNG-Fx-7OO" secondAttribute="height" multiplier="1:1" id="mI1-TF-v1A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jessie Magalhães" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sR-Zs-svz">
+                                        <rect key="frame" x="16" y="100" width="343" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7sR-Zs-svz" secondAttribute="trailing" constant="16" id="3ep-f5-Wo3"/>
+                                    <constraint firstItem="7sR-Zs-svz" firstAttribute="top" secondItem="xNG-Fx-7OO" secondAttribute="bottom" constant="12" id="gvO-d4-ju9"/>
+                                    <constraint firstItem="xNG-Fx-7OO" firstAttribute="top" secondItem="ouj-sX-Mtg" secondAttribute="top" constant="24" id="gxq-Os-0so"/>
+                                    <constraint firstItem="xNG-Fx-7OO" firstAttribute="centerX" secondItem="ouj-sX-Mtg" secondAttribute="centerX" id="i6g-ay-l0U"/>
+                                    <constraint firstAttribute="bottom" secondItem="7sR-Zs-svz" secondAttribute="bottom" constant="8" id="lxI-ni-wsn"/>
+                                    <constraint firstItem="7sR-Zs-svz" firstAttribute="leading" secondItem="ouj-sX-Mtg" secondAttribute="leading" constant="16" id="nYr-i5-W0F"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-ZD-03B" userLabel="phoneNumber" customClass="UnderlinedTitleLabel" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155.5" width="343" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="XPa-AZ-aFz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-9f-PVI" userLabel="email" customClass="UnderlinedTitleLabel" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="339.5" width="343" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="KIh-kn-caa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klL-gl-rav" userLabel="address" customClass="UnderlinedTitleLabel" customModule="MovileHack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="247.5" width="343" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="yFn-6w-H5q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S9a-ZD-03B" firstAttribute="leading" secondItem="WV9-uR-W5c" secondAttribute="leading" constant="16" id="5Ck-6W-g7Z"/>
+                            <constraint firstItem="WV9-uR-W5c" firstAttribute="trailing" secondItem="ouj-sX-Mtg" secondAttribute="trailing" id="8JM-dx-aAe"/>
+                            <constraint firstItem="WV9-uR-W5c" firstAttribute="trailing" secondItem="S9a-ZD-03B" secondAttribute="trailing" constant="16" id="8ni-dt-J3e"/>
+                            <constraint firstItem="WV9-uR-W5c" firstAttribute="trailing" secondItem="c0B-9f-PVI" secondAttribute="trailing" constant="16" id="9dw-Ce-4ur"/>
+                            <constraint firstItem="klL-gl-rav" firstAttribute="top" secondItem="S9a-ZD-03B" secondAttribute="bottom" constant="8" id="MG4-T4-P5M"/>
+                            <constraint firstItem="ouj-sX-Mtg" firstAttribute="leading" secondItem="WV9-uR-W5c" secondAttribute="leading" id="Oc3-OF-4TQ"/>
+                            <constraint firstItem="S9a-ZD-03B" firstAttribute="top" secondItem="ouj-sX-Mtg" secondAttribute="bottom" constant="16" id="Q8y-hY-a2j"/>
+                            <constraint firstItem="c0B-9f-PVI" firstAttribute="top" secondItem="klL-gl-rav" secondAttribute="bottom" constant="8" id="S7R-sA-7fX"/>
+                            <constraint firstItem="klL-gl-rav" firstAttribute="leading" secondItem="WV9-uR-W5c" secondAttribute="leading" constant="16" id="hax-Wg-nMW"/>
+                            <constraint firstItem="ouj-sX-Mtg" firstAttribute="top" secondItem="WV9-uR-W5c" secondAttribute="top" id="jEB-a2-mJf"/>
+                            <constraint firstItem="c0B-9f-PVI" firstAttribute="leading" secondItem="WV9-uR-W5c" secondAttribute="leading" constant="16" id="jFH-gj-u6I"/>
+                            <constraint firstItem="WV9-uR-W5c" firstAttribute="trailing" secondItem="klL-gl-rav" secondAttribute="trailing" constant="16" id="run-jt-VJM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WV9-uR-W5c"/>
                     </view>
                     <navigationItem key="navigationItem" id="ooj-h3-Uiq"/>
+                    <connections>
+                        <outlet property="addressView" destination="klL-gl-rav" id="7RG-Zq-Sed"/>
+                        <outlet property="emailView" destination="c0B-9f-PVI" id="9Qe-R7-vQA"/>
+                        <outlet property="phoneNumberView" destination="S9a-ZD-03B" id="EHj-TF-gJa"/>
+                        <outlet property="profileImageView" destination="xNG-Fx-7OO" id="naZ-vY-Ege"/>
+                        <outlet property="userNameLabel" destination="7sR-Zs-svz" id="zAM-tZ-PXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRM-sB-r9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

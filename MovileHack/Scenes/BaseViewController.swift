@@ -15,6 +15,12 @@ class BaseViewController: UIViewController {
 
         //Navigation Bar Back Button
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        //Navigation Bar Shadow
+        if let navigation = self.navigationController {
+            navigation.navigationBar.shadowImage = UIImage()
+            CALayer.setDropShadow(layer: navigation.navigationBar.layer, radius: 6, opacity: 0.45)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -17,6 +17,10 @@ extension Notification.Name {
     static let ProductImageDownloaded = Notification.Name(rawValue: "ProductImageDownloaded")
     static let ProductImageDownloadFailed = Notification.Name(rawValue: "ProductImageDownloadFailed")
     
+    //Restaurant Image
+    static let RestaurantImageDownloaded = Notification.Name(rawValue: "RestaurantImageDownloaded")
+    static let RestaurantImageDownloadFailed = Notification.Name(rawValue: "RestaurantImageDownloadFailed")
+    
     //Cart
     static let CartCleared = Notification.Name(rawValue: "CartCleared")
 }

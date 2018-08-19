@@ -7,13 +7,46 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ProfileViewController: BaseViewController {
-
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var profileImageView: UIImageView! {
+        didSet {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.height/2
+            self.profileImageView.layer.masksToBounds = true
+            self.profileImageView.image = UIImage(named: "jessie_profile")
+        }
+    }
+    @IBOutlet weak var userNameLabel: UILabel! {
+        didSet {
+            self.userNameLabel.font = UIFont.systemFont(ofSize: 26, weight: .regular)
+        }
+    }
+    @IBOutlet weak var phoneNumberView: UnderlinedTitleLabel!
+    @IBOutlet weak var addressView: UnderlinedTitleLabel!
+    @IBOutlet weak var emailView: UnderlinedTitleLabel!
+    
+    // MARK: - Variables
+    var restaurant: Restaurant?
+    
+    // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.title = "Profile"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        FacadeService.getCurrentRestaurant { (restaurant) in
+            self.restaurant = restaurant
+            if let restaurant = self.restaurant {
+                self.populateViewWithRestaurant(restaurant)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +54,19 @@ class ProfileViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Setup
+    func populateViewWithRestaurant(_ restaurant: Restaurant) {
+//        self.profileImageView.image = restaurant.image
+        
+        //Phone
+        if let phone = restaurant.phoneNumber {
+            self.phoneNumberView.populateWith(title: "Celular", info: phone, icon: UIImage(named: "phone_icon"))
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        //Address
+        self.addressView.populateWith(title: "Endereço", info: "Avenida do Rato Molhado - 210 - Campinas, SP", icon:  UIImage(named: "location_icon"))
+        
+        //Email
+        self.emailView.populateWith(title: "Email", info: "jessie@magalhaes.com", icon:  UIImage(named: "email_icon"))
     }
-    */
-
 }
