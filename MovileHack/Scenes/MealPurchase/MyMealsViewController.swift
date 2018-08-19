@@ -44,6 +44,11 @@ class MyMealsViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(mealImageDownloaded(notification:)), name: .MealImageDownloaded, object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .MealImageDownloaded, object: nil)
     }
@@ -59,7 +64,15 @@ class MyMealsViewController: BaseViewController {
 }
 
 extension MyMealsViewController : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: .MealQuantity).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
+            vc.meal = self.meals[indexPath.row]
+            vc.delegate = self
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }
 
 extension MyMealsViewController : UITableViewDataSource {
@@ -76,11 +89,12 @@ extension MyMealsViewController : UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let mealQuantityViewController = UIStoryboard(name: .MealQuantity).instantiateViewController(withIdentifier: ViewControllerName.MealQuantityViewController) as? MealQuantityViewController {
-            mealQuantityViewController.meal = self.meals[indexPath.row]
-            self.navigationController?.pushViewController(mealQuantityViewController, animated: true)
-        }
+}
+
+extension MyMealsViewController : MealQuantityViewControllerDelegate {
+    func selectedMealQuantity(meal: Meal, quantity: Int) {
+        // FIXME: Finish this
+        print("hi delegate")
     }
 }
+

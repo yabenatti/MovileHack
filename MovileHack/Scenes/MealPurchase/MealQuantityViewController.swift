@@ -8,9 +8,20 @@
 
 import UIKit
 
+protocol MealQuantityViewControllerDelegate : class {
+    func selectedMealQuantity(meal: Meal, quantity: Int)
+}
+
 class MealQuantityViewController: BaseViewController {
     
     // MARK: - IBOutlets
+    
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            self.contentView.layer.cornerRadius = 10
+            self.contentView.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var mealImageView: UIImageView! {
         didSet {
             self.mealImageView.image = UIImage(named: "meal_default")
@@ -18,29 +29,42 @@ class MealQuantityViewController: BaseViewController {
             self.mealImageView.layer.masksToBounds = true
         }
     }
-    @IBOutlet weak var mealProductsAndQuantityLabel: UILabel!
+    @IBOutlet weak var compositionLabel: UILabel!
+    @IBOutlet weak var productsTableView: UITableView! {
+        didSet {
+            self.productsTableView.dataSource = self
+            self.productsTableView.separatorStyle = .none
+            
+            self.productsTableView.register(IngredientsTableViewCell.self, forCellReuseIdentifier: String(describing: IngredientsTableViewCell.self))
+            self.productsTableView.register(UINib(nibName: String(describing: IngredientsTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: IngredientsTableViewCell.self))
+        }
+    }
+    @IBOutlet weak var totalItemsLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var mealQuantityTitleLabel: UILabel! {
         didSet {
-            mealQuantityTitleLabel.text = "QTD:"
+            mealQuantityTitleLabel.text = "Quantidade:"
         }
     }
     @IBOutlet weak var mealQuantityLabel: UILabel! {
         didSet {
-            mealQuantityLabel.text = "0"
+            mealQuantityLabel.text = "1"
         }
     }
     @IBOutlet weak var mealQuantityStepper: UIStepper! {
         didSet {
             self.mealQuantityStepper.tintColor = UIColor.movilePink
+            self.mealQuantityStepper.minimumValue = 1
         }
     }
     @IBOutlet weak var nextButton: CTAButton! {
         didSet {
-            self.nextButton.setTitle("Próximo", for: .normal)
+            self.nextButton.setTitle("Confirmar", for: .normal)
         }
     }
     
     // MARK: - Variables
+    weak var delegate: MealQuantityViewControllerDelegate?
     var meal: Meal?
     
     // MARK: - VC Lifecycle
@@ -50,9 +74,15 @@ class MealQuantityViewController: BaseViewController {
         if let meal = self.meal {
             self.title = meal.name
             self.populateView(meal)
+            self.productsTableView.reloadData()
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(mealImageDownloaded(notification:)), name: .MealImageDownloaded, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: - Layout
@@ -62,14 +92,8 @@ class MealQuantityViewController: BaseViewController {
             self.mealImageView.image = mealImage
         }
         
-        //Meal Products and Quantity
-        var mealProductsAndQuantityLabelString = ""
-        for product in meal.products {
-            mealProductsAndQuantityLabelString.append(product.name + "\n")
-        }
-        self.mealProductsAndQuantityLabel.text = mealProductsAndQuantityLabelString
-        self.mealProductsAndQuantityLabel.setNeedsLayout()
-        self.mealProductsAndQuantityLabel.layoutIfNeeded()
+        self.compositionLabel.text = meal.name
+        self.totalItemsLabel.text = "Total: \(meal.products.count) itens"
     }
     
     // MARK: - IBActions
@@ -78,10 +102,8 @@ class MealQuantityViewController: BaseViewController {
             return
         }
         
-        let storyboard = UIStoryboard(name: .ProductSelection)
-        if let vc = storyboard.instantiateViewController(withIdentifier: ViewControllerName.ProductSelectionViewController) as? ProductSelectionViewController {
-            vc.products = meal.products
-            self.navigationController?.pushViewController(vc, animated: true)
+        self.dismiss(animated: true) {
+            self.delegate?.selectedMealQuantity(meal: meal, quantity: Int(self.mealQuantityStepper.value))
         }
     }
     
@@ -91,11 +113,37 @@ class MealQuantityViewController: BaseViewController {
         }
     }
     
+    @IBAction func didTapOutsideView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Notifications
     @objc func mealImageDownloaded(notification: Notification) {
         guard let meal = self.meal else {
             return
         }
         self.populateView(meal)
+    }
+}
+
+extension MealQuantityViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let meal = self.meal {
+            return meal.products.count
+        }
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngredientsTableViewCell.self), for: indexPath) as? IngredientsTableViewCell,
+            let meal = self.meal else {
+            return UITableViewCell()
+        }
+        
+        cell.selectionStyle = .none
+        cell.populateWithProduct(meal.products[indexPath.row])
+        
+        return cell
     }
 }
