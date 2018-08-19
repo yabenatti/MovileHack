@@ -34,10 +34,10 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.96357124192374088" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QGX-CY-ujh" secondAttribute="trailing" constant="16" id="9Kw-Fr-iE4"/>
-                <constraint firstItem="oOe-Cc-oIJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="N9f-Yx-4NH"/>
+                <constraint firstItem="oOe-Cc-oIJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="N9f-Yx-4NH"/>
                 <constraint firstItem="oOe-Cc-oIJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="aQR-5k-xpI"/>
                 <constraint firstItem="QGX-CY-ujh" firstAttribute="centerY" secondItem="oOe-Cc-oIJ" secondAttribute="centerY" id="bIk-Ad-2cn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oOe-Cc-oIJ" secondAttribute="bottom" constant="4" id="f0B-fj-WYX"/>

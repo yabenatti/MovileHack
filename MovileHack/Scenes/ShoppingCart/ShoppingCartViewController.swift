@@ -90,6 +90,8 @@ class ShoppingCartViewController: BaseViewController {
             self.purveyorProductSections.removeAll()
             self.hideLoadingView()
             
+            self.tabBarController?.selectedIndex = 2
+            
             let alertVc = UIAlertController(title: "Parabéns", message: "Sua compra foi finalizada com sucesso!", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertVc.addAction(okAction)

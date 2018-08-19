@@ -21,15 +21,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIi-Kq-kmq">
-                        <rect key="frame" x="56" y="12" width="170" height="44.5"/>
+                        <rect key="frame" x="48" y="12" width="178" height="44.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUp-Pk-Hw5">
-                        <rect key="frame" x="16" y="22.5" width="24" height="24"/>
+                        <rect key="frame" x="16" y="26.5" width="16" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="24" id="d1e-QU-LDT"/>
+                            <constraint firstAttribute="width" constant="16" id="d1e-QU-LDT"/>
                             <constraint firstAttribute="width" secondItem="CUp-Pk-Hw5" secondAttribute="height" multiplier="1:1" id="ugy-PN-RtZ"/>
                         </constraints>
                     </imageView>
