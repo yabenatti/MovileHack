@@ -28,7 +28,5 @@ class IngredientsTableViewCell: UITableViewCell {
     func populateWithMealProduct(_ mealProduct: MealProduct) {
         self.productNameLabel.text = mealProduct.product.name
         self.productQuantityLabel.text = "\(mealProduct.quantity)\(mealProduct.unit.rawValue)"
-        
-        // FIXME: - Price
     }
 }

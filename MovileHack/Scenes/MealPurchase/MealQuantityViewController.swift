@@ -23,6 +23,7 @@ class MealQuantityViewController: BaseViewController {
     @IBOutlet weak var mealImageView: UIImageView! {
         didSet {
             self.mealImageView.image = UIImage(named: "meal_default")
+            self.mealImageView.contentMode = .scaleAspectFill
             self.mealImageView.layer.cornerRadius = self.mealImageView.frame.size.height/2
             self.mealImageView.layer.masksToBounds = true
         }

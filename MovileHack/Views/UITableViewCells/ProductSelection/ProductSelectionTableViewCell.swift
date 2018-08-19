@@ -51,7 +51,7 @@ class ProductSelectionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(type: ProductOptionType, productOption: ProductOption, isSelected: Bool) {
+    func setup(type: ProductOptionType, purveyorProduct: PurveyorProduct, isSelected: Bool) {
         switch type {
         case .Featured:
             self.optionTypeImageView.image = UIImage(named: "featured")
@@ -60,18 +60,18 @@ class ProductSelectionTableViewCell: UITableViewCell {
         case .Cheapest:
             self.optionTypeImageView.image = UIImage(named: "cheapest")
         }
-        
-        self.productPurveyorInfoLabel.text = productOption.purveyorName
-        let purveyorInfoString = "\(productOption.purveyorName) - \(productOption.deliveryTime)hrs"
+
+        self.productPurveyorInfoLabel.text = purveyorProduct.purveyor.name
+        let purveyorInfoString = "\(purveyorProduct.purveyor.name) - \(purveyorProduct.deliveryTime)hrs"
         let purveyorInfoAttributedString = NSMutableAttributedString(string: purveyorInfoString)
-        purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17, weight: .bold)], range: NSRange.init(location: 0, length: productOption.purveyorName.count))
-        purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15)], range: NSRange(location: productOption.purveyorName.count, length: purveyorInfoString.count - productOption.purveyorName.count))
+        purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17, weight: .bold)], range: NSRange.init(location: 0, length: purveyorProduct.purveyor.name.count))
+        purveyorInfoAttributedString.addAttributes([NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15)], range: NSRange(location: purveyorProduct.purveyor.name.count, length: purveyorInfoString.count - purveyorProduct.purveyor.name.count))
         self.productPurveyorInfoLabel.attributedText = purveyorInfoAttributedString
         
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
         currencyFormatter.locale = Locale(identifier: "pt_br")
-        let price = currencyFormatter.string(from: NSNumber(floatLiteral: productOption.price)) ?? ""
+        let price = currencyFormatter.string(from: NSNumber(floatLiteral: purveyorProduct.price)) ?? ""
         self.productPriceLabel.text = price
 
         if isSelected {

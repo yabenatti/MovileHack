@@ -16,7 +16,7 @@ final class MealService {
         dispatchGroup.enter()
         FacadeService.getProductsFor(mealId: "1") { (products) in
             if let products = products {
-                let meal = Meal(id: "1", name: "Salada de Frutas", imageUrl: nil)
+                let meal = Meal(id: "1", name: "Salada de Frutas", imageUrl: "https://receitanatureba.com/wp-content/uploads/2017/12/11.jpg")
                 var mealProducts = [MealProduct]()
                 mealProducts.append(MealProduct(product: products[0], quantity: 7, unit: .Unit)) //Banana
                 mealProducts.append(MealProduct(product: products[1], quantity: 4.5, unit: .Unit)) //Maçã
@@ -29,7 +29,7 @@ final class MealService {
         dispatchGroup.enter()
         FacadeService.getProductsFor(mealId: "2") { (products) in
             if let products = products {
-                let meal = Meal(id: "2", name: "Esfiha de Frango", imageUrl: nil)
+                let meal = Meal(id: "2", name: "Esfiha de Frango", imageUrl: "https://receitinhas.s3-sa-east-1.amazonaws.com/wp-content/uploads/2016/12/esfiha_de_frango-848x477.jpg")
                 var mealProducts = [MealProduct]()
                 mealProducts.append(MealProduct(product: products[0], quantity: 10, unit: .Grams)) //Frango
                 mealProducts.append(MealProduct(product: products[1], quantity: 20, unit: .Grams)) //Massa
