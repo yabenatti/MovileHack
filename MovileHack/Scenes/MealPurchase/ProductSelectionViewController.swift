@@ -137,6 +137,7 @@ class ProductSelectionViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ProductSelectionViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ProductSelectionSectionHeaderView()
@@ -176,6 +177,7 @@ extension ProductSelectionViewController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ProductSelectionViewController : UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.productSelectionSections.count

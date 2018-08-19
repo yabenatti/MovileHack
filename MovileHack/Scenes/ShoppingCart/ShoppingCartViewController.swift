@@ -107,6 +107,7 @@ class ShoppingCartViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ShoppingCartViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ShoppingCartTableHeaderView()
@@ -120,6 +121,7 @@ extension ShoppingCartViewController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ShoppingCartViewController : UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.purveyorProductSections.count

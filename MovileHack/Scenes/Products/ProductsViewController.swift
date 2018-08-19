@@ -71,6 +71,7 @@ class ProductsViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ProductsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -81,6 +82,7 @@ extension ProductsViewController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ProductsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.filteredProducts.count

@@ -14,7 +14,7 @@ final class TabBarUtils {
             return
         }
         
-        //Find conversation list tab
+        //Find shopping cart tab
         if let index = viewControllers.index(where: { (viewController) -> Bool in
             guard let navigationController = viewController as? UINavigationController else {
                 return false

@@ -38,6 +38,7 @@ class ProductSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - Methods
     func populateWithProduct(_ product: Product) {
         if let productImage = product.image {
             self.productImageView.image = productImage

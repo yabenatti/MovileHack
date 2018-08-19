@@ -121,6 +121,7 @@ class MealQuantityViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MealQuantityViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let meal = self.meal {

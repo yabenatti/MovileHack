@@ -25,6 +25,7 @@ class IngredientsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - Methods
     func populateWithMealProduct(_ mealProduct: MealProduct) {
         self.productNameLabel.text = mealProduct.product.name
         self.productQuantityLabel.text = "\(mealProduct.quantity)\(mealProduct.unit.rawValue)"

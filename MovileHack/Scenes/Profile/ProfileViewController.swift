@@ -58,8 +58,6 @@ class ProfileViewController: BaseViewController {
     
     // MARK: - Setup
     func populateViewWithRestaurant(_ restaurant: Restaurant) {
-//        self.profileImageView.image = restaurant.image
-        
         //Phone
         if let phone = restaurant.phoneNumber {
             self.phoneNumberView.populateWith(title: "Celular", info: phone, icon: UIImage(named: "phone_icon"))

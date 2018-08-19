@@ -169,6 +169,7 @@ extension MyMealsViewController : MealQuantityViewControllerDelegate {
     }
 }
 
+// MARK: - ProductSelectionViewControllerDelegate
 extension MyMealsViewController : ProductSelectionViewControllerDelegate {
     func didAddProducts() {
         self.selectedMeals.removeAll()
